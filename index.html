@@ -115,132 +115,84 @@ const questions = [
   }
 },
 
+<script>
+const questions = [
+
 {
-  stem: "A postoperative patient reports increasing pain and appears anxious. BP 156/94 mmHg, HR 112 bpm. Surgical dressing is dry and intact.",
+  stem: "A 64-year-old male with COPD becomes increasingly drowsy after receiving morphine. RR 8/min, SpO₂ 91% on room air.",
   options: [
-    { text: "Administer prescribed analgesic medication", tag: "SCFHS" },
-    { text: "Reassure the patient and encourage deep breathing", tag: "SAFE_DELAY" },
-    { text: "Notify the surgeon of elevated blood pressure", tag: "STR" },
-    { text: "Assess the surgical site for bleeding", tag: "NCLEX" }
+    { text: "Notify the physician immediately", tag: "STR" },
+    { text: "Apply supplemental oxygen", tag: "SAFE_DELAY" },
+    { text: "Assess respiratory effort and level of consciousness", tag: "SCFHS" },
+    { text: "Prepare naloxone for possible administration", tag: "NCLEX" }
   ],
-  correct: 0,
+  correctTag: "SCFHS",
   rationale: {
-    correct: "Although further assessment and notification may be appropriate, the patient exhibits physiologic responses consistent with uncontrolled pain. Administering prescribed analgesia directly addresses the underlying cause, making it the most appropriate first action.",
-    distractors: [
-      "This supports comfort but does not address the primary cause of distress.",
-      "This represents escalation but delays symptom control.",
-      "Assessment is reasonable; however, no evidence suggests active bleeding."
-    ]
+    correct: "Although opioid reversal and provider notification may be required, the patient demonstrates signs of respiratory depression requiring immediate nursing assessment. Evaluating respiratory effort and level of consciousness guides appropriate intervention, making this the most appropriate first action.",
+    distractors: {
+      STR: "This reflects escalation of care but delays immediate nursing assessment expected by SCFHS.",
+      SAFE_DELAY: "Oxygen does not correct hypoventilation and may worsen carbon dioxide retention.",
+      NCLEX: "Preparing reversal anticipates deterioration but bypasses the required first assessment."
+    }
+  }
+},
+
+{
+  stem: "A postoperative patient suddenly develops stridor and agitation 30 minutes after extubation.",
+  options: [
+    { text: "Apply oxygen via face mask", tag: "SCFHS" },
+    { text: "Notify anesthesia immediately", tag: "STR" },
+    { text: "Place the patient in a supine position", tag: "SAFE_DELAY" },
+    { text: "Prepare emergency airway equipment", tag: "NCLEX" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Although airway equipment preparation and provider notification are appropriate, the patient demonstrates acute airway compromise. Immediate oxygen administration supports oxygenation while further interventions are initiated, making this the most appropriate first action.",
+    distractors: {
+      STR: "Notification delays immediate stabilization.",
+      SAFE_DELAY: "Supine positioning may worsen airway obstruction.",
+      NCLEX: "Preparation is appropriate but secondary to immediate oxygen support."
+    }
+  }
+},
+
+{
+  stem: "A patient with sepsis has BP 84/48 mmHg, HR 122 bpm, and urine output of 15 mL/hr.",
+  options: [
+    { text: "Increase IV fluids as prescribed", tag: "SCFHS" },
+    { text: "Notify the physician of hypotension", tag: "STR" },
+    { text: "Insert a Foley catheter", tag: "NCLEX" },
+    { text: "Document intake and output", tag: "SAFE_DELAY" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Although provider notification and further assessment are appropriate, the patient demonstrates hypoperfusion. Increasing IV fluids as prescribed directly supports circulation and is the most appropriate immediate nursing action.",
+    distractors: {
+      STR: "Escalation without intervention delays stabilization.",
+      NCLEX: "Assessment is secondary to restoring perfusion.",
+      SAFE_DELAY: "Documentation does not address shock."
+    }
+  }
+},
+
+{
+  stem: "A diabetic patient becomes confused and diaphoretic. Capillary glucose is 38 mg/dL.",
+  options: [
+    { text: "Administer IV dextrose", tag: "SCFHS" },
+    { text: "Notify the physician immediately", tag: "STR" },
+    { text: "Recheck blood glucose in 15 minutes", tag: "SAFE_DELAY" },
+    { text: "Document the findings", tag: "SAFE_DELAY" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Although provider notification is appropriate, the patient demonstrates symptomatic hypoglycemia requiring immediate correction. Administering IV dextrose rapidly restores glucose levels and prevents neurologic injury.",
+    distractors: {
+      STR: "Notification delays treatment.",
+      SAFE_DELAY: "Delays correction of a life-threatening condition."
+    }
   }
 }
-{
-  critical:true,
-  stem:"A 70-year-old patient with COPD becomes drowsy two hours after receiving opioid analgesia. RR 8/min, SpO₂ 90% on room air.",
-  options:[
-    {t:"Notify the physician immediately", tag:"ESCALATION"},
-    {t:"Apply supplemental oxygen", tag:"DELAY"},
-    {t:"Assess level of consciousness and respiratory effort", tag:"SCFHS"},
-    {t:"Prepare naloxone administration", tag:"ANTICIPATION"}
-  ],
-  correct:2,
-  rationale:{
-    correct:"Although opioid reversal and provider notification may be required, the patient demonstrates signs of respiratory depression that require immediate nursing assessment. Evaluating consciousness and respiratory effort guides safe and appropriate intervention, making this the most appropriate first action.",
-    options:[
-      "Escalation may be necessary but should follow immediate assessment.",
-      "Oxygen does not correct hypoventilation and may worsen CO₂ retention.",
-      "Correct — this action determines the severity and guides intervention.",
-      "This anticipates deterioration but bypasses required assessment."
-    ]
-  }
-},
 
-/* ===================== 2 ===================== */
-{
-  critical:true,
-  stem:"A postoperative patient suddenly reports chest pain and dyspnea. HR 122, BP 90/58, SpO₂ 88% on room air.",
-  options:[
-    {t:"Apply oxygen via non-rebreather mask", tag:"SCFHS"},
-    {t:"Notify the surgeon immediately", tag:"ESCALATION"},
-    {t:"Place the patient in supine position", tag:"DELAY"},
-    {t:"Obtain a 12-lead ECG", tag:"ASSESS"}
-  ],
-  correct:0,
-  rationale:{
-    correct:"Although diagnostic evaluation and provider notification are appropriate, the patient demonstrates acute hypoxia and hemodynamic instability. Immediate oxygen administration addresses life-threatening hypoxemia and is the most appropriate first nursing action.",
-    options:[
-      "Correct — this stabilizes oxygenation immediately.",
-      "Notification delays immediate stabilization.",
-      "Supine positioning may worsen dyspnea.",
-      "Assessment is necessary but secondary to stabilization."
-    ]
-  }
-},
-
-/* ===================== 3 ===================== */
-{
-  critical:true,
-  stem:"A patient with sepsis is receiving IV fluids. Urine output is 10 mL/hr, BP 86/50, HR 118.",
-  options:[
-    {t:"Increase IV fluid rate as prescribed", tag:"SCFHS"},
-    {t:"Notify the physician of hypotension", tag:"ESCALATION"},
-    {t:"Document intake and output", tag:"DELAY"},
-    {t:"Insert a Foley catheter", tag:"ASSESS"}
-  ],
-  correct:0,
-  rationale:{
-    correct:"Although provider notification and further assessment are appropriate, the patient demonstrates ongoing hypoperfusion. Increasing IV fluids as prescribed directly addresses circulatory compromise and is the most appropriate immediate nursing action.",
-    options:[
-      "Correct — this addresses hypotension and perfusion.",
-      "Escalation without intervention delays stabilization.",
-      "Documentation does not address instability.",
-      "Assessment may help but delays intervention."
-    ]
-  }
-},
-
-/* ===================== 4 ===================== */
-{
-  critical:false,
-  stem:"A patient receiving enteral feeding reports nausea. Residual volume is mildly elevated.",
-  options:[
-    {t:"Pause feeding and reassess in 30 minutes", tag:"SCFHS"},
-    {t:"Notify the provider immediately", tag:"ESCALATION"},
-    {t:"Administer antiemetic without order", tag:"SAFETY"},
-    {t:"Continue feeding as ordered", tag:"DELAY"}
-  ],
-  correct:0,
-  rationale:{
-    correct:"Although escalation may be required if symptoms persist, temporarily pausing the feeding allows reassessment and prevents aspiration, making it the most appropriate initial action.",
-    options:[
-      "Correct — this prevents complications while reassessing.",
-      "Immediate escalation is premature.",
-      "Administering medication without an order is unsafe.",
-      "Continuing feeding may worsen symptoms."
-    ]
-  }
-},
-
-/* ===================== 5 ===================== */
-{
-  critical:true,
-  stem:"A patient with diabetes becomes confused and diaphoretic. Capillary glucose is 42 mg/dL.",
-  options:[
-    {t:"Administer IV dextrose", tag:"SCFHS"},
-    {t:"Notify the physician", tag:"ESCALATION"},
-    {t:"Recheck blood glucose in 15 minutes", tag:"DELAY"},
-    {t:"Document the finding", tag:"DELAY"}
-  ],
-  correct:0,
-  rationale:{
-    correct:"Although provider notification is appropriate, the patient demonstrates symptomatic hypoglycemia requiring immediate correction. Administering IV dextrose rapidly restores glucose levels and prevents neurologic injury.",
-    options:[
-      "Correct — this addresses the immediate life-threatening condition.",
-      "Notification delays treatment.",
-      "Rechecking delays correction.",
-      "Documentation does not address hypoglycemia."
-    ]
-  }
-}
 ];
 
 // ================= ENGINE =================
