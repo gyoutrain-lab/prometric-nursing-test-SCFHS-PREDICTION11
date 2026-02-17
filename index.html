@@ -132,7 +132,48 @@ const questions = [
       "Assessment is reasonable; however, no evidence suggests active bleeding."
     ]
   }
-}
+},
+{
+  critical:true,
+  stem:"A 68-year-old male with pneumonia becomes restless 20 minutes after admission. BP 88/54, HR 124, RR 30, SpO₂ 89% on room air.",
+  options:[
+    {t:"Notify the physician immediately", tag:"ESCALATION"},
+    {t:"Elevate the head of the bed", tag:"DELAY"},
+    {t:"Initiate supplemental oxygen therapy", tag:"SCFHS"},
+    {t:"Prepare intubation equipment", tag:"ANTICIPATION"}
+  ],
+  correct:2,
+  rationale:{
+    correct:"Although notifying the physician and preparing for advanced airway support may be appropriate, the patient demonstrates acute hypoxia requiring immediate nursing intervention. Supplemental oxygen directly addresses impaired gas exchange, whereas other actions may delay correction of hypoxia. Therefore, initiating oxygen therapy is the most appropriate first action.",
+    options:[
+      "This reflects escalation bias. SCFHS expects stabilization before notification.",
+      "This may improve ventilation but does not directly correct hypoxia.",
+      "Correct — this action immediately addresses the life-threatening problem.",
+      "This anticipates deterioration but bypasses required immediate intervention."
+    ]
+  }
+},
+{
+  critical:false,
+  stem:"A postoperative patient reports severe incisional pain. BP 158/96, HR 110. Surgical dressing is clean and dry.",
+  options:[
+    {t:"Administer prescribed analgesic", tag:"SCFHS"},
+    {t:"Reassure and encourage relaxation", tag:"DELAY"},
+    {t:"Notify the surgeon of hypertension", tag:"ESCALATION"},
+    {t:"Reassess the surgical site", tag:"ASSESS"}
+  ],
+  correct:0,
+  rationale:{
+    correct:"Although further assessment and provider notification may be appropriate, the patient's physiological response indicates uncontrolled pain. Administering prescribed analgesia directly addresses the underlying cause and is the most appropriate first action.",
+    options:[
+      "Correct — this treats the root cause of the instability.",
+      "This provides comfort but delays symptom control.",
+      "This escalates care unnecessarily before intervention.",
+      "Assessment is reasonable but no signs indicate complications."
+    ]
+  }
+},
+
 ];
 
 // ================= ENGINE =================
