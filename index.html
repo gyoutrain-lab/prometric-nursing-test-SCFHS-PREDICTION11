@@ -189,7 +189,201 @@ const questions = [
     }
   }
 }
+{
+stem:"A 64-year-old male with COPD becomes drowsy after receiving morphine. RR 8/min, SpO₂ 91% on room air.",
+options:[
+{ text:"Notify the physician immediately", tag:"STR" },
+{ text:"Apply supplemental oxygen", tag:"SAFE_DELAY" },
+{ text:"Assess respiratory effort and level of consciousness", tag:"SCFHS" },
+{ text:"Prepare naloxone for possible use", tag:"NCLEX" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although opioid reversal and provider notification may be required, the patient demonstrates respiratory depression that requires immediate nursing assessment. Assessing respiratory effort and level of consciousness guides safe and timely intervention, making this the most appropriate first action.",
+distractors:{
+STR:"Escalation without assessment delays immediate nursing responsibility.",
+SAFE_DELAY:"Oxygen does not correct hypoventilation and may worsen CO₂ retention.",
+NCLEX:"Preparation anticipates deterioration but bypasses required assessment."
+}
+}
+},
 
+/* ===================== 2 ===================== */
+{
+stem:"Thirty minutes after extubation, a postoperative patient develops stridor and agitation.",
+options:[
+{ text:"Apply oxygen via face mask", tag:"SCFHS" },
+{ text:"Notify anesthesia immediately", tag:"STR" },
+{ text:"Place the patient supine", tag:"SAFE_DELAY" },
+{ text:"Prepare emergency airway equipment", tag:"NCLEX" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although notification and airway preparation are appropriate, the patient demonstrates acute airway compromise. Immediate oxygen administration supports oxygenation while further interventions are initiated.",
+distractors:{
+STR:"Notification delays immediate stabilization.",
+SAFE_DELAY:"Supine positioning may worsen airway obstruction.",
+NCLEX:"Preparation is appropriate but secondary to immediate support."
+}
+}
+},
+
+/* ===================== 3 ===================== */
+{
+stem:"A patient with pneumonia becomes restless and cyanotic. SpO₂ 85% on room air, RR 32/min.",
+options:[
+{ text:"Initiate high-flow oxygen therapy", tag:"SCFHS" },
+{ text:"Notify the provider", tag:"STR" },
+{ text:"Obtain arterial blood gases", tag:"NCLEX" },
+{ text:"Document findings", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although diagnostics and provider notification are appropriate, the patient exhibits severe hypoxemia. Immediate oxygen therapy directly addresses impaired gas exchange.",
+distractors:{
+STR:"Escalation delays correction of hypoxia.",
+NCLEX:"Diagnostics do not stabilize the patient.",
+SAFE_DELAY:"Documentation does not address instability."
+}
+}
+},
+
+/* ===================== 4 ===================== */
+{
+stem:"A trauma patient becomes hypotensive with distended neck veins and tachycardia.",
+options:[
+{ text:"Administer high-flow oxygen", tag:"SCFHS" },
+{ text:"Notify the trauma team", tag:"STR" },
+{ text:"Position the patient flat", tag:"SAFE_DELAY" },
+{ text:"Prepare for chest tube insertion", tag:"NCLEX" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although definitive management is required, immediate oxygen administration supports tissue oxygenation during suspected obstructive shock.",
+distractors:{
+STR:"Notification delays immediate support.",
+SAFE_DELAY:"Positioning does not correct hypoxia.",
+NCLEX:"Preparation anticipates treatment but delays stabilization."
+}
+}
+},
+
+/* ===================== 5 ===================== */
+{
+stem:"A patient with sepsis has BP 84/48 mmHg, HR 122 bpm, urine output 15 mL/hr.",
+options:[
+{ text:"Increase IV fluids as prescribed", tag:"SCFHS" },
+{ text:"Notify the physician of hypotension", tag:"STR" },
+{ text:"Insert a Foley catheter", tag:"NCLEX" },
+{ text:"Document intake and output", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although escalation and further assessment are appropriate, the patient demonstrates hypoperfusion. Increasing IV fluids directly supports circulation.",
+distractors:{
+STR:"Escalation without intervention delays stabilization.",
+NCLEX:"Assessment is secondary to restoring perfusion.",
+SAFE_DELAY:"Documentation does not address shock."
+}
+}
+},
+
+/* ===================== 6 ===================== */
+{
+stem:"A diabetic patient becomes confused and diaphoretic. Capillary glucose is 38 mg/dL.",
+options:[
+{ text:"Administer IV dextrose", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Recheck glucose in 15 minutes", tag:"SAFE_DELAY" },
+{ text:"Document the finding", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although provider notification is appropriate, the patient demonstrates symptomatic hypoglycemia requiring immediate correction.",
+distractors:{
+STR:"Notification delays treatment.",
+SAFE_DELAY:"Delays correction of a life-threatening condition."
+}
+}
+},
+
+/* ===================== 7 ===================== */
+{
+stem:"A patient suddenly develops unilateral weakness and slurred speech 45 minutes ago.",
+options:[
+{ text:"Activate stroke protocol", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Perform a full neurologic assessment", tag:"NCLEX" },
+{ text:"Document neurologic findings", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although assessment and notification are necessary, activating the stroke protocol ensures timely intervention within the therapeutic window.",
+distractors:{
+STR:"Notification alone delays protocol activation.",
+NCLEX:"Assessment delays time-sensitive care.",
+SAFE_DELAY:"Documentation does not address urgency."
+}
+}
+},
+
+/* ===================== 8 ===================== */
+{
+stem:"A postoperative patient has a saturated dressing and BP 90/56 mmHg.",
+options:[
+{ text:"Apply pressure to the surgical site", tag:"SCFHS" },
+{ text:"Notify the surgeon immediately", tag:"STR" },
+{ text:"Change the dressing", tag:"SAFE_DELAY" },
+{ text:"Document blood loss", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although provider notification is required, applying pressure directly addresses active bleeding and supports hemodynamic stability.",
+distractors:{
+STR:"Escalation without control delays stabilization.",
+SAFE_DELAY:"Changing or documenting delays hemorrhage control."
+}
+}
+},
+
+/* ===================== 9 ===================== */
+{
+stem:"A patient receiving potassium infusion reports burning at the IV site.",
+options:[
+{ text:"Stop the infusion and assess the site", tag:"SCFHS" },
+{ text:"Notify the provider", tag:"STR" },
+{ text:"Slow the infusion rate", tag:"SAFE_DELAY" },
+{ text:"Document the complaint", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Stopping the infusion prevents tissue injury while allowing assessment of possible infiltration.",
+distractors:{
+STR:"Notification delays immediate safety action.",
+SAFE_DELAY:"Slowing or documenting does not prevent injury."
+}
+}
+},
+
+/* ===================== 10 ===================== */
+{
+stem:"A patient develops wheezing, urticaria, and hypotension after antibiotic administration.",
+options:[
+{ text:"Stop the infusion and administer oxygen", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Document the reaction", tag:"SAFE_DELAY" },
+{ text:"Obtain vital signs", tag:"NCLEX" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Although further management is required, stopping the infusion and supporting oxygenation address anaphylaxis immediately.",
+distractors:{
+STR:"Notification delays lifesaving action.",
+SAFE_DELAY:"Documentation delays treatment.",
+NCLEX:"Assessment is secondary to intervention."
+}
+}
+}
 ];
 
 // ================= ENGINE =================
