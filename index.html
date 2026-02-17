@@ -383,6 +383,193 @@ SAFE_DELAY:"Documentation delays treatment.",
 NCLEX:"Assessment is secondary to intervention."
 }
 }
+},
+{
+stem:"A patient with heart failure suddenly develops crackles, pink frothy sputum, and severe dyspnea.",
+options:[
+{ text:"Place the patient in high Fowler’s position", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Prepare for intubation", tag:"NCLEX" },
+{ text:"Document respiratory findings", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Positioning the patient upright immediately reduces venous return and improves lung expansion, making it the priority action in acute pulmonary edema.",
+distractors:{
+STR:"Notification delays immediate respiratory relief.",
+NCLEX:"Preparation anticipates deterioration but does not stabilize now.",
+SAFE_DELAY:"Documentation does not address distress."
+}
+}
+},
+
+/* ===================== 12 ===================== */
+{
+stem:"A patient receiving a blood transfusion develops fever, chills, and flank pain.",
+options:[
+{ text:"Stop the transfusion immediately", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Slow the transfusion rate", tag:"SAFE_DELAY" },
+{ text:"Document the reaction", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Stopping the transfusion prevents further antigen exposure and is the immediate lifesaving action in a suspected transfusion reaction.",
+distractors:{
+STR:"Notification follows emergency intervention.",
+SAFE_DELAY:"Slowing or documenting delays patient safety."
+}
+}
+},
+
+/* ===================== 13 ===================== */
+{
+stem:"A confused elderly patient is attempting to climb out of bed despite fall precautions.",
+options:[
+{ text:"Stay with the patient and ensure safety", tag:"SCFHS" },
+{ text:"Apply physical restraints", tag:"SAFE_DELAY" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Document the behavior", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Immediate supervision prevents injury and respects least-restrictive safety principles.",
+distractors:{
+SAFE_DELAY:"Restraints require assessment and orders.",
+STR:"Notification delays injury prevention."
+}
+}
+},
+
+/* ===================== 14 ===================== */
+{
+stem:"A patient with chest pain suddenly becomes unresponsive and pulseless.",
+options:[
+{ text:"Initiate CPR immediately", tag:"SCFHS" },
+{ text:"Call the code team", tag:"STR" },
+{ text:"Attach cardiac monitor", tag:"NCLEX" },
+{ text:"Document the event", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Immediate CPR maintains circulation and oxygenation and is the priority in cardiac arrest.",
+distractors:{
+STR:"Calling for help follows initiation of CPR.",
+NCLEX:"Monitoring delays circulation support."
+}
+}
+},
+
+/* ===================== 15 ===================== */
+{
+stem:"A postoperative patient reports sudden calf pain and unilateral leg swelling.",
+options:[
+{ text:"Keep the patient on bed rest", tag:"SCFHS" },
+{ text:"Massage the affected leg", tag:"SAFE_DELAY" },
+{ text:"Encourage ambulation", tag:"SAFE_DELAY" },
+{ text:"Apply warm compresses", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Suspected deep vein thrombosis requires immobility to prevent embolization.",
+distractors:{
+SAFE_DELAY:"Massage, ambulation, or heat increases embolus risk."
+}
+}
+},
+
+/* ===================== 16 ===================== */
+{
+stem:"A patient with a tracheostomy becomes restless with decreased oxygen saturation.",
+options:[
+{ text:"Assess patency of the tracheostomy tube", tag:"SCFHS" },
+{ text:"Notify respiratory therapy", tag:"STR" },
+{ text:"Increase oxygen concentration", tag:"SAFE_DELAY" },
+{ text:"Document respiratory status", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Airway obstruction must be ruled out before escalating care.",
+distractors:{
+STR:"Notification delays airway assessment.",
+SAFE_DELAY:"Oxygen does not correct obstruction."
+}
+}
+},
+
+/* ===================== 17 ===================== */
+{
+stem:"A patient receiving chemotherapy reports oral pain and difficulty swallowing.",
+options:[
+{ text:"Inspect the oral mucosa", tag:"SCFHS" },
+{ text:"Administer prescribed analgesics", tag:"NCLEX" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Document symptoms", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Assessment identifies mucositis severity and guides further interventions.",
+distractors:{
+NCLEX:"Medication follows assessment.",
+STR:"Notification without assessment delays care."
+}
+}
+},
+
+/* ===================== 18 ===================== */
+{
+stem:"A patient with chronic kidney disease has potassium level of 6.2 mEq/L.",
+options:[
+{ text:"Place the patient on cardiac monitoring", tag:"SCFHS" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Restrict dietary potassium", tag:"SAFE_DELAY" },
+{ text:"Document the result", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Hyperkalemia poses immediate risk for lethal arrhythmias; monitoring is essential.",
+distractors:{
+STR:"Notification follows patient safety measures.",
+SAFE_DELAY:"Dietary changes are not immediate."
+}
+}
+},
+
+/* ===================== 19 ===================== */
+{
+stem:"A patient suddenly complains of severe headache and photophobia.",
+options:[
+{ text:"Assess neurologic status immediately", tag:"SCFHS" },
+{ text:"Administer prescribed analgesic", tag:"SAFE_DELAY" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Dim the lights", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Neurologic assessment identifies life-threatening causes such as intracranial hemorrhage.",
+distractors:{
+SAFE_DELAY:"Symptom relief delays diagnosis.",
+STR:"Notification follows assessment."
+}
+}
+},
+
+/* ===================== 20 ===================== */
+{
+stem:"A patient receiving insulin becomes shaky and pale.",
+options:[
+{ text:"Check capillary blood glucose", tag:"SCFHS" },
+{ text:"Administer insulin as scheduled", tag:"SAFE_DELAY" },
+{ text:"Notify the physician", tag:"STR" },
+{ text:"Document appearance", tag:"SAFE_DELAY" }
+],
+correctTag:"SCFHS",
+rationale:{
+correct:"Assessment confirms hypoglycemia before intervention.",
+distractors:{
+SAFE_DELAY:"Giving insulin may worsen hypoglycemia."
+}
+}
 }
 ];
 
