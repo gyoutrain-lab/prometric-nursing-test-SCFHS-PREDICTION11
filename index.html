@@ -173,6 +173,1536 @@ const questions = [
       STR: "Agreements have no legal force."
     }
   }
+},
+{
+  q: "A patient falls while ambulating to the bathroom. What is the MOST appropriate nursing documentation?",
+  options: [
+    { text: "Patient found on floor beside bed at 0215; vital signs stable; physician notified", tag: "SCFHS" },
+    { text: "Patient fell due to poor judgment and noncompliance", tag: "SAFE_DELAY" },
+    { text: "Incident report completed and risk management notified", tag: "NCLEX" },
+    { text: "Patient attempted to walk without assistance despite instructions", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Documentation must be factual, objective, time-specific, and free of blame or internal processes.",
+    distractors: {
+      SAFE_DELAY: "Assigning cause or judgment is legally unsafe.",
+      NCLEX: "Incident reports are never documented in the medical record.",
+      STR: "Speculating on patient intent increases liability."
+    }
+  }
+},
+{
+  q: "After a medication error is discovered, what should the nurse document in the medical record?",
+  options: [
+    { text: "Medication administered, patient response, and provider notification", tag: "SCFHS" },
+    { text: "Medication error occurred due to staffing shortage", tag: "SAFE_DELAY" },
+    { text: "Incident report filed per hospital policy", tag: "NCLEX" },
+    { text: "Nurse apologized to patient for the error", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "The medical record reflects patient care and response—not blame, apologies, or internal reporting.",
+    distractors: {
+      SAFE_DELAY: "Root cause analysis does not belong in the chart.",
+      NCLEX: "Incident reports are confidential and separate.",
+      STR: "Apologies may imply liability."
+    }
+  }
+},
+{
+  q: "Which documentation entry places the nurse at GREATEST legal risk?",
+  options: [
+    { text: "Patient appears intoxicated and irresponsible", tag: "SAFE_DELAY" },
+    { text: "Patient reports pain 8/10 in left hip", tag: "SCFHS" },
+    { text: "Administered morphine 2 mg IV at 1400", tag: "NCLEX" },
+    { text: "Patient ambulated 10 meters with assistance", tag: "STR" }
+  ],
+  correctTag: "SAFE_DELAY",
+  rationale: {
+    correct: "Subjective judgments and character labels are legally indefensible.",
+    distractors: {
+      SCFHS: "Patient-reported data is acceptable when clearly attributed.",
+      NCLEX: "Objective medication documentation is required.",
+      STR: "Functional observations are appropriate."
+    }
+  }
+},
+{
+  q: "A nurse realizes a documentation omission from earlier in the shift. What is the BEST action?",
+  options: [
+    { text: "Enter a late entry with date, time, and reason", tag: "SCFHS" },
+    { text: "Alter the original documentation", tag: "SAFE_DELAY" },
+    { text: "Ignore the omission", tag: "NCLEX" },
+    { text: "Ask another nurse to chart it", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Late entries must be clearly identified to maintain legal integrity.",
+    distractors: {
+      SAFE_DELAY: "Altering records constitutes falsification.",
+      NCLEX: "Omissions compromise continuity and legal defense.",
+      STR: "Charting must be done by the nurse who provided care."
+    }
+  }
+},
+{
+  q: "Which statement should NEVER appear in nursing documentation?",
+  options: [
+    { text: "Incident report completed", tag: "SCFHS" },
+    { text: "Patient denies chest pain", tag: "SAFE_DELAY" },
+    { text: "Provider notified at 1630", tag: "NCLEX" },
+    { text: "Patient education provided regarding insulin use", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Incident reports are confidential risk-management documents and must not be referenced.",
+    distractors: {
+      SAFE_DELAY: "Patient statements may be documented verbatim.",
+      NCLEX: "Provider notification is appropriate to document.",
+      STR: "Education documentation is essential."
+    }
+  }
+},
+{
+  q: "A patient alleges inappropriate care by a nurse. What is the nurse’s BEST documentation approach?",
+  options: [
+    { text: "Document objective findings and patient statements verbatim", tag: "SCFHS" },
+    { text: "Defend actions and justify care provided", tag: "SAFE_DELAY" },
+    { text: "Refuse to document until investigation concludes", tag: "NCLEX" },
+    { text: "Document emotional response to allegation", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Objective, factual documentation protects both patient and nurse.",
+    distractors: {
+      SAFE_DELAY: "Defensive charting increases liability.",
+      NCLEX: "Delay compromises record accuracy.",
+      STR: "Personal emotions do not belong in the chart."
+    }
+  }
+},
+{
+  q: "Which documentation practice BEST supports legal defensibility?",
+  options: [
+    { text: "Charting care immediately after completion", tag: "SCFHS" },
+    { text: "Using general statements to save time", tag: "SAFE_DELAY" },
+    { text: "Copy-pasting previous shift notes", tag: "NCLEX" },
+    { text: "Charting at end of shift from memory", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Timely, contemporaneous documentation reduces error and legal risk.",
+    distractors: {
+      SAFE_DELAY: "Vague documentation lacks legal strength.",
+      NCLEX: "Copy-forward risks inaccuracy.",
+      STR: "Delayed charting invites omissions."
+    }
+  }
+},
+{
+  q: "Following a sentinel event, what is the nurse’s documentation responsibility?",
+  options: [
+    { text: "Document patient condition and care provided only", tag: "SCFHS" },
+    { text: "Document analysis of system failures", tag: "SAFE_DELAY" },
+    { text: "Document names of staff involved", tag: "NCLEX" },
+    { text: "Document anticipated legal outcomes", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Clinical records reflect patient care—not investigations or blame.",
+    distractors: {
+      SAFE_DELAY: "System analysis belongs to quality review.",
+      NCLEX: "Naming staff increases liability.",
+      STR: "Legal speculation is inappropriate."
+    }
+  }
+},
+{
+  q: "A patient on an involuntary psychiatric hold refuses antipsychotic medication and is calm, oriented, and not threatening harm. What is the nurse’s BEST action?",
+  options: [
+    { text: "Respect refusal and notify the provider", tag: "SCFHS" },
+    { text: "Administer the medication due to involuntary status", tag: "SAFE_DELAY" },
+    { text: "Call security to assist with administration", tag: "NCLEX" },
+    { text: "Document refusal and discontinue medication", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Involuntary admission does not remove the right to refuse treatment unless emergency criteria are met.",
+    distractors: {
+      SAFE_DELAY: "Forced medication without criteria or order is unlawful.",
+      NCLEX: "Security involvement escalates without legal basis.",
+      STR: "Medication decisions require provider input."
+    }
+  }
+},
+{
+  q: "A patient becomes acutely violent, attempting to strike staff. What is the LEGALLY appropriate sequence?",
+  options: [
+    { text: "Attempt de-escalation, then emergency medication if danger persists", tag: "SCFHS" },
+    { text: "Apply restraints immediately without assessment", tag: "SAFE_DELAY" },
+    { text: "Administer PRN sedative without order", tag: "NCLEX" },
+    { text: "Call law enforcement first", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Least-restrictive measures precede emergency medication; forced treatment requires imminent danger.",
+    distractors: {
+      SAFE_DELAY: "Restraints are last resort.",
+      NCLEX: "Medication requires order/authorization.",
+      STR: "Clinical emergencies are managed internally first."
+    }
+  }
+},
+{
+  q: "Which situation MOST justifies emergency forced medication?",
+  options: [
+    { text: "Patient is actively attempting self-harm", tag: "SCFHS" },
+    { text: "Patient refuses medication but is verbally disruptive", tag: "SAFE_DELAY" },
+    { text: "Patient lacks insight into illness", tag: "NCLEX" },
+    { text: "Family requests medication despite refusal", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Imminent risk to self or others meets emergency criteria.",
+    distractors: {
+      SAFE_DELAY: "Disruption alone is insufficient.",
+      NCLEX: "Insight is not the legal threshold.",
+      STR: "Family cannot override patient rights."
+    }
+  }
+},
+{
+  q: "A patient under involuntary hold refuses long-acting injectable antipsychotic. What is the nurse’s BEST response?",
+  options: [
+    { text: "Hold the medication and notify the provider", tag: "SCFHS" },
+    { text: "Administer due to treatment plan", tag: "SAFE_DELAY" },
+    { text: "Restrain the patient for injection", tag: "NCLEX" },
+    { text: "Document refusal and discard medication", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Non-emergency medications require consent or specific legal order.",
+    distractors: {
+      SAFE_DELAY: "Treatment plans do not override consent.",
+      NCLEX: "Restraints for non-emergency meds are unlawful.",
+      STR: "Medication disposition requires pharmacy/provider guidance."
+    }
+  }
+},
+{
+  q: "After emergency sedation is administered, what is the nurse’s NEXT legal responsibility?",
+  options: [
+    { text: "Continuous monitoring and documentation of response", tag: "SCFHS" },
+    { text: "Leave the patient to allow rest", tag: "SAFE_DELAY" },
+    { text: "Restrain the patient until end of shift", tag: "NCLEX" },
+    { text: "Delay documentation until provider arrives", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Emergency treatment requires close monitoring and timely documentation.",
+    distractors: {
+      SAFE_DELAY: "Unmonitored sedation is unsafe.",
+      NCLEX: "Restraints must be reassessed and minimized.",
+      STR: "Delayed documentation increases legal risk."
+    }
+  }
+},
+{
+  q: "A patient requests information about why medication was forced during a crisis. What should the nurse explain?",
+  options: [
+    { text: "It was administered due to immediate risk to safety", tag: "SCFHS" },
+    { text: "It was ordered because the patient is involuntary", tag: "SAFE_DELAY" },
+    { text: "It was hospital policy", tag: "NCLEX" },
+    { text: "It was done to control behavior", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Forced treatment is justified only by imminent danger, not status or policy.",
+    distractors: {
+      SAFE_DELAY: "Status alone is not justification.",
+      NCLEX: "Policy does not replace legal criteria.",
+      STR: "Behavior control framing is unethical."
+    }
+  }
+},
+{
+  q: "Which nursing action MOST increases legal liability during forced medication?",
+  options: [
+    { text: "Administering without documenting imminent danger", tag: "SAFE_DELAY" },
+    { text: "Using the minimum effective dose", tag: "SCFHS" },
+    { text: "Monitoring vital signs post-administration", tag: "NCLEX" },
+    { text: "Discontinuing restraints when safe", tag: "STR" }
+  ],
+  correctTag: "SAFE_DELAY",
+  rationale: {
+    correct: "Lack of documentation undermines legal justification for forced treatment.",
+    distractors: {
+      SCFHS: "Minimal dosing aligns with least-restrictive principle.",
+      NCLEX: "Monitoring is required.",
+      STR: "Early release reduces liability."
+    }
+  }
+},
+{
+  q: "A patient under involuntary hold regains capacity and requests to refuse medication. What should the nurse do?",
+  options: [
+    { text: "Honor refusal and notify the provider", tag: "SCFHS" },
+    { text: "Continue medication until discharge", tag: "SAFE_DELAY" },
+    { text: "Require family consent", tag: "NCLEX" },
+    { text: "Seek court order automatically", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity restoration reinstates the right to refuse treatment.",
+    distractors: {
+      SAFE_DELAY: "Hold status does not negate capacity.",
+      NCLEX: "Family consent is secondary to patient autonomy.",
+      STR: "Court orders require specific criteria."
+    }
+  }
+},
+{
+  q: "A patient with a valid DNR becomes acutely dyspneic with SpO₂ 82%. What is the nurse’s PRIORITY action?",
+  options: [
+    { text: "Provide oxygen and comfort-focused interventions", tag: "SCFHS" },
+    { text: "Withhold all treatment due to DNR status", tag: "SAFE_DELAY" },
+    { text: "Initiate CPR preparation", tag: "NCLEX" },
+    { text: "Notify the family before intervening", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A DNR limits resuscitation, not appropriate medical or comfort care.",
+    distractors: {
+      SAFE_DELAY: "DNR does not mean no treatment.",
+      NCLEX: "CPR contradicts DNR orders.",
+      STR: "Care should not be delayed for notification."
+    }
+  }
+},
+{
+  q: "A terminally ill patient with decision-making capacity requests to stop life-prolonging treatment. What is the nurse’s BEST response?",
+  options: [
+    { text: "Respect the decision and notify the provider", tag: "SCFHS" },
+    { text: "Encourage continuation of treatment", tag: "SAFE_DELAY" },
+    { text: "Ask the family to persuade the patient", tag: "NCLEX" },
+    { text: "Refuse to comply due to ethical concerns", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Competent patients have the right to refuse treatment, even if life-sustaining.",
+    distractors: {
+      SAFE_DELAY: "Persuasion undermines autonomy.",
+      NCLEX: "Family cannot override a competent patient.",
+      STR: "Personal ethics do not supersede patient rights."
+    }
+  }
+},
+{
+  q: "A patient arrives unconscious with a valid advance directive refusing intubation. The family demands full code. What should the nurse do?",
+  options: [
+    { text: "Follow the advance directive and notify the provider", tag: "SCFHS" },
+    { text: "Honor the family’s request", tag: "SAFE_DELAY" },
+    { text: "Delay action until ethics consult", tag: "NCLEX" },
+    { text: "Initiate intubation due to uncertainty", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A valid advance directive legally supersedes family wishes.",
+    distractors: {
+      SAFE_DELAY: "Family authority does not override legal documents.",
+      NCLEX: "Delay may violate patient wishes.",
+      STR: "Acting against a directive is unlawful."
+    }
+  }
+},
+{
+  q: "A confused patient intermittently answers questions and refuses a blood transfusion. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Assess decision-making capacity and notify the provider", tag: "SCFHS" },
+    { text: "Honor refusal immediately", tag: "SAFE_DELAY" },
+    { text: "Proceed with transfusion due to confusion", tag: "NCLEX" },
+    { text: "Ask family for consent", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity must be formally assessed before honoring or overriding refusal.",
+    distractors: {
+      SAFE_DELAY: "Refusal requires capacity.",
+      NCLEX: "Confusion alone does not justify forced treatment.",
+      STR: "Family consent is secondary to capacity assessment."
+    }
+  }
+},
+{
+  q: "Which patient has the HIGHEST likelihood of retaining decision-making capacity?",
+  options: [
+    { text: "Patient with stable dementia who understands consequences", tag: "SCFHS" },
+    { text: "Patient in acute delirium", tag: "SAFE_DELAY" },
+    { text: "Patient under heavy sedation", tag: "NCLEX" },
+    { text: "Patient with severe hypoxia", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task-specific and may be present despite chronic conditions.",
+    distractors: {
+      SAFE_DELAY: "Delirium impairs capacity.",
+      NCLEX: "Sedation limits decision-making.",
+      STR: "Hypoxia compromises cognition."
+    }
+  }
+},
+{
+  q: "A patient with a DNR arrests due to ventricular fibrillation. What should the nurse do?",
+  options: [
+    { text: "Provide comfort care and withhold CPR", tag: "SCFHS" },
+    { text: "Initiate CPR due to shockable rhythm", tag: "SAFE_DELAY" },
+    { text: "Wait for physician confirmation", tag: "NCLEX" },
+    { text: "Ask family if resuscitation is desired", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A valid DNR applies regardless of rhythm.",
+    distractors: {
+      SAFE_DELAY: "Rhythm type does not negate DNR.",
+      NCLEX: "Delay is inappropriate.",
+      STR: "Family input cannot override DNR."
+    }
+  }
+},
+{
+  q: "A patient lacks capacity and has no advance directive. Who is the LEGAL decision-maker?",
+  options: [
+    { text: "Designated healthcare proxy or next of kin per law", tag: "SCFHS" },
+    { text: "Primary nurse", tag: "SAFE_DELAY" },
+    { text: "Attending physician", tag: "NCLEX" },
+    { text: "Hospital ethics committee", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Surrogate decision-makers are defined by legal hierarchy.",
+    distractors: {
+      SAFE_DELAY: "Nurses do not make treatment decisions.",
+      NCLEX: "Physicians require consent or surrogate authority.",
+      STR: "Ethics consults advise but do not consent."
+    }
+  }
+},
+{
+  q: "A family requests withdrawal of life support, but the patient previously expressed refusal of withdrawal while competent. What should the nurse do?",
+  options: [
+    { text: "Advocate for the patient’s prior expressed wishes", tag: "SCFHS" },
+    { text: "Honor the family’s request", tag: "SAFE_DELAY" },
+    { text: "Remain neutral and do nothing", tag: "NCLEX" },
+    { text: "Document family preference and proceed", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Previously stated wishes guide care when capacity is lost.",
+    distractors: {
+      SAFE_DELAY: "Family cannot override known patient preferences.",
+      NCLEX: "Inaction delays appropriate care.",
+      STR: "Documentation does not justify action."
+    }
+  }
+},
+{
+  q: "Which action BEST protects patient autonomy at end of life?",
+  options: [
+    { text: "Clarifying goals of care and documenting preferences", tag: "SCFHS" },
+    { text: "Deferring decisions to family", tag: "SAFE_DELAY" },
+    { text: "Following unit routine", tag: "NCLEX" },
+    { text: "Avoiding difficult conversations", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Clear communication and documentation preserve patient-directed care.",
+    distractors: {
+      SAFE_DELAY: "Family may not reflect patient wishes.",
+      NCLEX: "Routine cannot replace individualized goals.",
+      STR: "Avoidance leads to conflict and errors."
+    }
+  }
+},
+{
+  q: "A patient with schizophrenia calmly refuses a central line after risks and benefits are explained. He accurately repeats consequences and alternatives. What is the nurse’s BEST action?",
+  options: [
+    { text: "Respect the refusal and notify the provider", tag: "SCFHS" },
+    { text: "Assume incapacity due to psychiatric diagnosis", tag: "SAFE_DELAY" },
+    { text: "Request court determination of competence", tag: "NCLEX" },
+    { text: "Seek family consent to override refusal", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is decision-specific and can be present despite psychiatric illness when understanding is demonstrated.",
+    distractors: {
+      SAFE_DELAY: "Diagnosis alone does not negate capacity.",
+      NCLEX: "Competence is a legal determination, not required here.",
+      STR: "Family cannot override a capacitated patient."
+    }
+  }
+},
+{
+  q: "Which statement BEST differentiates capacity from competence?",
+  options: [
+    { text: "Capacity is clinically assessed; competence is legally determined", tag: "SCFHS" },
+    { text: "Capacity applies only to psychiatric patients", tag: "SAFE_DELAY" },
+    { text: "Competence can be determined by nurses", tag: "NCLEX" },
+    { text: "Capacity and competence are interchangeable", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is a clinical judgment; competence is a court ruling.",
+    distractors: {
+      SAFE_DELAY: "Capacity applies to all patients.",
+      NCLEX: "Nurses do not determine competence.",
+      STR: "They are legally distinct concepts."
+    }
+  }
+},
+{
+  q: "A patient is intoxicated but clearly understands and consents to suturing of a laceration. What should the nurse conclude?",
+  options: [
+    { text: "The patient may have capacity for this specific decision", tag: "SCFHS" },
+    { text: "Intoxication automatically removes capacity", tag: "SAFE_DELAY" },
+    { text: "Consent is invalid until sober", tag: "NCLEX" },
+    { text: "Court approval is required", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task- and time-specific; intoxication does not automatically negate it.",
+    distractors: {
+      SAFE_DELAY: "Assumption without assessment is incorrect.",
+      NCLEX: "Delay is unnecessary if capacity is present.",
+      STR: "Courts are not involved in routine care decisions."
+    }
+  }
+},
+{
+  q: "A patient with mild dementia agrees to antibiotics but cannot explain potential risks. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Further assess understanding before proceeding", tag: "SCFHS" },
+    { text: "Proceed since the patient agreed", tag: "SAFE_DELAY" },
+    { text: "Declare the patient incompetent", tag: "NCLEX" },
+    { text: "Obtain family consent immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Understanding of risks and benefits is required to establish capacity.",
+    distractors: {
+      SAFE_DELAY: "Agreement alone does not confirm capacity.",
+      NCLEX: "Competence is not a nursing determination.",
+      STR: "Family consent follows only if capacity is absent."
+    }
+  }
+},
+{
+  q: "Which patient scenario MOST clearly demonstrates intact decision-making capacity?",
+  options: [
+    { text: "Patient explains risks, benefits, alternatives, and consequences", tag: "SCFHS" },
+    { text: "Patient agrees with the physician’s recommendation", tag: "SAFE_DELAY" },
+    { text: "Patient has no psychiatric history", tag: "NCLEX" },
+    { text: "Patient’s family supports the decision", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity requires understanding, appreciation, reasoning, and communication.",
+    distractors: {
+      SAFE_DELAY: "Agreement does not equal understanding.",
+      NCLEX: "Psychiatric history is irrelevant.",
+      STR: "Family support does not define capacity."
+    }
+  }
+},
+{
+  q: "A confused patient fluctuates between lucidity and disorientation. When should capacity be assessed?",
+  options: [
+    { text: "During the period of maximal alertness", tag: "SCFHS" },
+    { text: "At the most confused state", tag: "SAFE_DELAY" },
+    { text: "Only after a court ruling", tag: "NCLEX" },
+    { text: "After family discussion", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity assessment should occur when cognition is optimal.",
+    distractors: {
+      SAFE_DELAY: "Assessment during confusion is unreliable.",
+      NCLEX: "Legal rulings are not required for capacity.",
+      STR: "Family discussion does not determine capacity."
+    }
+  }
+},
+{
+  q: "A patient refuses dialysis. The provider states, 'He is not competent.' What is the nurse’s BEST response?",
+  options: [
+    { text: "Request a formal capacity assessment and clarification", tag: "SCFHS" },
+    { text: "Proceed with dialysis", tag: "SAFE_DELAY" },
+    { text: "Accept the statement as legally binding", tag: "NCLEX" },
+    { text: "Contact hospital legal services immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Providers may assess capacity, but competence requires legal determination.",
+    distractors: {
+      SAFE_DELAY: "Forced treatment without capacity determination is unlawful.",
+      NCLEX: "Statements do not replace legal process.",
+      STR: "Legal escalation follows only if disputes persist."
+    }
+  }
+},
+{
+  q: "Which factor does NOT by itself eliminate decision-making capacity?",
+  options: [
+    { text: "Psychiatric diagnosis", tag: "SCFHS" },
+    { text: "Inability to understand consequences", tag: "SAFE_DELAY" },
+    { text: "Inability to communicate a choice", tag: "NCLEX" },
+    { text: "Inability to reason about options", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Diagnosis alone does not negate capacity.",
+    distractors: {
+      SAFE_DELAY: "Understanding is required for capacity.",
+      NCLEX: "Communication is essential.",
+      STR: "Reasoning is a core component."
+    }
+  }
+},
+{
+  q: "A patient previously judged legally incompetent now demonstrates full understanding of a low-risk procedure. What applies?",
+  options: [
+    { text: "Capacity may still exist for this specific decision", tag: "SCFHS" },
+    { text: "Legal incompetence removes all decision rights", tag: "SAFE_DELAY" },
+    { text: "Only the guardian may decide", tag: "NCLEX" },
+    { text: "Court reassessment is required immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task-specific and may exist despite legal incompetence in some jurisdictions.",
+    distractors: {
+      SAFE_DELAY: "This is an overgeneralization.",
+      NCLEX: "Guardianship does not always eliminate patient input.",
+      STR: "Court review is not required for every decision."
+    }
+  }
+},
+{
+  q: "Which nursing action MOST supports ethical practice when capacity is borderline?",
+  options: [
+    { text: "Advocate for reassessment and clear documentation", tag: "SCFHS" },
+    { text: "Default to family decision-making", tag: "SAFE_DELAY" },
+    { text: "Avoid involvement to reduce risk", tag: "NCLEX" },
+    { text: "Follow provider orders without question", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Advocacy and documentation protect patient rights and legal safety.",
+    distractors: {
+      SAFE_DELAY: "Family authority is secondary.",
+      NCLEX: "Avoidance increases legal risk.",
+      STR: "Blind compliance is unsafe."
+    }
+  }
+},
+{
+  q: "A patient with a valid DNR becomes acutely dyspneic with SpO₂ 82%. What is the nurse’s PRIORITY action?",
+  options: [
+    { text: "Provide oxygen and comfort-focused interventions", tag: "SCFHS" },
+    { text: "Withhold all treatment due to DNR status", tag: "SAFE_DELAY" },
+    { text: "Initiate CPR preparation", tag: "NCLEX" },
+    { text: "Notify the family before intervening", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A DNR limits resuscitation, not appropriate medical or comfort care.",
+    distractors: {
+      SAFE_DELAY: "DNR does not mean no treatment.",
+      NCLEX: "CPR contradicts DNR orders.",
+      STR: "Care should not be delayed for notification."
+    }
+  }
+},
+{
+  q: "A terminally ill patient with decision-making capacity requests to stop life-prolonging treatment. What is the nurse’s BEST response?",
+  options: [
+    { text: "Respect the decision and notify the provider", tag: "SCFHS" },
+    { text: "Encourage continuation of treatment", tag: "SAFE_DELAY" },
+    { text: "Ask the family to persuade the patient", tag: "NCLEX" },
+    { text: "Refuse to comply due to ethical concerns", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Competent patients have the right to refuse treatment, even if life-sustaining.",
+    distractors: {
+      SAFE_DELAY: "Persuasion undermines autonomy.",
+      NCLEX: "Family cannot override a competent patient.",
+      STR: "Personal ethics do not supersede patient rights."
+    }
+  }
+},
+{
+  q: "A patient arrives unconscious with a valid advance directive refusing intubation. The family demands full code. What should the nurse do?",
+  options: [
+    { text: "Follow the advance directive and notify the provider", tag: "SCFHS" },
+    { text: "Honor the family’s request", tag: "SAFE_DELAY" },
+    { text: "Delay action until ethics consult", tag: "NCLEX" },
+    { text: "Initiate intubation due to uncertainty", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A valid advance directive legally supersedes family wishes.",
+    distractors: {
+      SAFE_DELAY: "Family authority does not override legal documents.",
+      NCLEX: "Delay may violate patient wishes.",
+      STR: "Acting against a directive is unlawful."
+    }
+  }
+},
+{
+  q: "A confused patient intermittently answers questions and refuses a blood transfusion. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Assess decision-making capacity and notify the provider", tag: "SCFHS" },
+    { text: "Honor refusal immediately", tag: "SAFE_DELAY" },
+    { text: "Proceed with transfusion due to confusion", tag: "NCLEX" },
+    { text: "Ask family for consent", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity must be formally assessed before honoring or overriding refusal.",
+    distractors: {
+      SAFE_DELAY: "Refusal requires capacity.",
+      NCLEX: "Confusion alone does not justify forced treatment.",
+      STR: "Family consent is secondary to capacity assessment."
+    }
+  }
+},
+{
+  q: "Which patient has the HIGHEST likelihood of retaining decision-making capacity?",
+  options: [
+    { text: "Patient with stable dementia who understands consequences", tag: "SCFHS" },
+    { text: "Patient in acute delirium", tag: "SAFE_DELAY" },
+    { text: "Patient under heavy sedation", tag: "NCLEX" },
+    { text: "Patient with severe hypoxia", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task-specific and may be present despite chronic conditions.",
+    distractors: {
+      SAFE_DELAY: "Delirium impairs capacity.",
+      NCLEX: "Sedation limits decision-making.",
+      STR: "Hypoxia compromises cognition."
+    }
+  }
+},
+{
+  q: "A patient with a DNR arrests due to ventricular fibrillation. What should the nurse do?",
+  options: [
+    { text: "Provide comfort care and withhold CPR", tag: "SCFHS" },
+    { text: "Initiate CPR due to shockable rhythm", tag: "SAFE_DELAY" },
+    { text: "Wait for physician confirmation", tag: "NCLEX" },
+    { text: "Ask family if resuscitation is desired", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A valid DNR applies regardless of rhythm.",
+    distractors: {
+      SAFE_DELAY: "Rhythm type does not negate DNR.",
+      NCLEX: "Delay is inappropriate.",
+      STR: "Family input cannot override DNR."
+    }
+  }
+},
+{
+  q: "A patient lacks capacity and has no advance directive. Who is the LEGAL decision-maker?",
+  options: [
+    { text: "Designated healthcare proxy or next of kin per law", tag: "SCFHS" },
+    { text: "Primary nurse", tag: "SAFE_DELAY" },
+    { text: "Attending physician", tag: "NCLEX" },
+    { text: "Hospital ethics committee", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Surrogate decision-makers are defined by legal hierarchy.",
+    distractors: {
+      SAFE_DELAY: "Nurses do not make treatment decisions.",
+      NCLEX: "Physicians require consent or surrogate authority.",
+      STR: "Ethics consults advise but do not consent."
+    }
+  }
+},
+{
+  q: "A family requests withdrawal of life support, but the patient previously expressed refusal of withdrawal while competent. What should the nurse do?",
+  options: [
+    { text: "Advocate for the patient’s prior expressed wishes", tag: "SCFHS" },
+    { text: "Honor the family’s request", tag: "SAFE_DELAY" },
+    { text: "Remain neutral and do nothing", tag: "NCLEX" },
+    { text: "Document family preference and proceed", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Previously stated wishes guide care when capacity is lost.",
+    distractors: {
+      SAFE_DELAY: "Family cannot override known patient preferences.",
+      NCLEX: "Inaction delays appropriate care.",
+      STR: "Documentation does not justify action."
+    }
+  }
+},
+{
+  q: "Which action BEST protects patient autonomy at end of life?",
+  options: [
+    { text: "Clarifying goals of care and documenting preferences", tag: "SCFHS" },
+    { text: "Deferring decisions to family", tag: "SAFE_DELAY" },
+    { text: "Following unit routine", tag: "NCLEX" },
+    { text: "Avoiding difficult conversations", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Clear communication and documentation preserve patient-directed care.",
+    distractors: {
+      SAFE_DELAY: "Family may not reflect patient wishes.",
+      NCLEX: "Routine cannot replace individualized goals.",
+      STR: "Avoidance leads to conflict and errors."
+    }
+  }
+},
+{
+  q: "A patient with schizophrenia calmly refuses a central line after risks and benefits are explained. He accurately repeats consequences and alternatives. What is the nurse’s BEST action?",
+  options: [
+    { text: "Respect the refusal and notify the provider", tag: "SCFHS" },
+    { text: "Assume incapacity due to psychiatric diagnosis", tag: "SAFE_DELAY" },
+    { text: "Request court determination of competence", tag: "NCLEX" },
+    { text: "Seek family consent to override refusal", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is decision-specific and can be present despite psychiatric illness when understanding is demonstrated.",
+    distractors: {
+      SAFE_DELAY: "Diagnosis alone does not negate capacity.",
+      NCLEX: "Competence is a legal determination, not required here.",
+      STR: "Family cannot override a capacitated patient."
+    }
+  }
+},
+{
+  q: "Which statement BEST differentiates capacity from competence?",
+  options: [
+    { text: "Capacity is clinically assessed; competence is legally determined", tag: "SCFHS" },
+    { text: "Capacity applies only to psychiatric patients", tag: "SAFE_DELAY" },
+    { text: "Competence can be determined by nurses", tag: "NCLEX" },
+    { text: "Capacity and competence are interchangeable", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is a clinical judgment; competence is a court ruling.",
+    distractors: {
+      SAFE_DELAY: "Capacity applies to all patients.",
+      NCLEX: "Nurses do not determine competence.",
+      STR: "They are legally distinct concepts."
+    }
+  }
+},
+{
+  q: "A patient is intoxicated but clearly understands and consents to suturing of a laceration. What should the nurse conclude?",
+  options: [
+    { text: "The patient may have capacity for this specific decision", tag: "SCFHS" },
+    { text: "Intoxication automatically removes capacity", tag: "SAFE_DELAY" },
+    { text: "Consent is invalid until sober", tag: "NCLEX" },
+    { text: "Court approval is required", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task- and time-specific; intoxication does not automatically negate it.",
+    distractors: {
+      SAFE_DELAY: "Assumption without assessment is incorrect.",
+      NCLEX: "Delay is unnecessary if capacity is present.",
+      STR: "Courts are not involved in routine care decisions."
+    }
+  }
+},
+{
+  q: "A patient with mild dementia agrees to antibiotics but cannot explain potential risks. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Further assess understanding before proceeding", tag: "SCFHS" },
+    { text: "Proceed since the patient agreed", tag: "SAFE_DELAY" },
+    { text: "Declare the patient incompetent", tag: "NCLEX" },
+    { text: "Obtain family consent immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Understanding of risks and benefits is required to establish capacity.",
+    distractors: {
+      SAFE_DELAY: "Agreement alone does not confirm capacity.",
+      NCLEX: "Competence is not a nursing determination.",
+      STR: "Family consent follows only if capacity is absent."
+    }
+  }
+},
+{
+  q: "Which patient scenario MOST clearly demonstrates intact decision-making capacity?",
+  options: [
+    { text: "Patient explains risks, benefits, alternatives, and consequences", tag: "SCFHS" },
+    { text: "Patient agrees with the physician’s recommendation", tag: "SAFE_DELAY" },
+    { text: "Patient has no psychiatric history", tag: "NCLEX" },
+    { text: "Patient’s family supports the decision", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity requires understanding, appreciation, reasoning, and communication.",
+    distractors: {
+      SAFE_DELAY: "Agreement does not equal understanding.",
+      NCLEX: "Psychiatric history is irrelevant.",
+      STR: "Family support does not define capacity."
+    }
+  }
+},
+{
+  q: "A confused patient fluctuates between lucidity and disorientation. When should capacity be assessed?",
+  options: [
+    { text: "During the period of maximal alertness", tag: "SCFHS" },
+    { text: "At the most confused state", tag: "SAFE_DELAY" },
+    { text: "Only after a court ruling", tag: "NCLEX" },
+    { text: "After family discussion", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity assessment should occur when cognition is optimal.",
+    distractors: {
+      SAFE_DELAY: "Assessment during confusion is unreliable.",
+      NCLEX: "Legal rulings are not required for capacity.",
+      STR: "Family discussion does not determine capacity."
+    }
+  }
+},
+{
+  q: "A patient refuses dialysis. The provider states, 'He is not competent.' What is the nurse’s BEST response?",
+  options: [
+    { text: "Request a formal capacity assessment and clarification", tag: "SCFHS" },
+    { text: "Proceed with dialysis", tag: "SAFE_DELAY" },
+    { text: "Accept the statement as legally binding", tag: "NCLEX" },
+    { text: "Contact hospital legal services immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Providers may assess capacity, but competence requires legal determination.",
+    distractors: {
+      SAFE_DELAY: "Forced treatment without capacity determination is unlawful.",
+      NCLEX: "Statements do not replace legal process.",
+      STR: "Legal escalation follows only if disputes persist."
+    }
+  }
+},
+{
+  q: "Which factor does NOT by itself eliminate decision-making capacity?",
+  options: [
+    { text: "Psychiatric diagnosis", tag: "SCFHS" },
+    { text: "Inability to understand consequences", tag: "SAFE_DELAY" },
+    { text: "Inability to communicate a choice", tag: "NCLEX" },
+    { text: "Inability to reason about options", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Diagnosis alone does not negate capacity.",
+    distractors: {
+      SAFE_DELAY: "Understanding is required for capacity.",
+      NCLEX: "Communication is essential.",
+      STR: "Reasoning is a core component."
+    }
+  }
+},
+{
+  q: "A patient previously judged legally incompetent now demonstrates full understanding of a low-risk procedure. What applies?",
+  options: [
+    { text: "Capacity may still exist for this specific decision", tag: "SCFHS" },
+    { text: "Legal incompetence removes all decision rights", tag: "SAFE_DELAY" },
+    { text: "Only the guardian may decide", tag: "NCLEX" },
+    { text: "Court reassessment is required immediately", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity is task-specific and may exist despite legal incompetence in some jurisdictions.",
+    distractors: {
+      SAFE_DELAY: "This is an overgeneralization.",
+      NCLEX: "Guardianship does not always eliminate patient input.",
+      STR: "Court review is not required for every decision."
+    }
+  }
+},
+{
+  q: "Which nursing action MOST supports ethical practice when capacity is borderline?",
+  options: [
+    { text: "Advocate for reassessment and clear documentation", tag: "SCFHS" },
+    { text: "Default to family decision-making", tag: "SAFE_DELAY" },
+    { text: "Avoid involvement to reduce risk", tag: "NCLEX" },
+    { text: "Follow provider orders without question", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Advocacy and documentation protect patient rights and legal safety.",
+    distractors: {
+      SAFE_DELAY: "Family authority is secondary.",
+      NCLEX: "Avoidance increases legal risk.",
+      STR: "Blind compliance is unsafe."
+    }
+  }
+},
+{
+  q: "A patient receives the wrong medication dose resulting in ICU admission. This qualifies as a sentinel event. What is the nurse’s FIRST responsibility?",
+  options: [
+    { text: "Ensure patient safety and notify the provider and supervisor", tag: "SCFHS" },
+    { text: "Complete the incident report immediately", tag: "SAFE_DELAY" },
+    { text: "Explain the error details to the family independently", tag: "NCLEX" },
+    { text: "Document the medication error analysis in the chart", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Patient stabilization and internal notification take priority before reporting or disclosure.",
+    distractors: {
+      SAFE_DELAY: "Reporting follows safety actions.",
+      NCLEX: "Disclosure is coordinated, not unilateral.",
+      STR: "Root-cause analysis never belongs in the chart."
+    }
+  }
+},
+{
+  q: "Who is primarily responsible for formally disclosing a sentinel event to the patient or family?",
+  options: [
+    { text: "The attending physician or designated team leader", tag: "SCFHS" },
+    { text: "The bedside nurse involved in the event", tag: "SAFE_DELAY" },
+    { text: "Hospital legal counsel", tag: "NCLEX" },
+    { text: "Risk management only", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Disclosure is led by the responsible provider, often with leadership support.",
+    distractors: {
+      SAFE_DELAY: "Nurses support but do not lead disclosure.",
+      NCLEX: "Legal counsel advises but does not disclose.",
+      STR: "Risk management coordinates, not delivers disclosure."
+    }
+  }
+},
+{
+  q: "Which information is appropriate to include during sentinel event disclosure?",
+  options: [
+    { text: "Known facts and current patient condition", tag: "SCFHS" },
+    { text: "Speculation about staff fault", tag: "SAFE_DELAY" },
+    { text: "Root cause analysis findings", tag: "NCLEX" },
+    { text: "Names of staff involved", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Disclosure includes facts and impact, not blame or analysis.",
+    distractors: {
+      SAFE_DELAY: "Speculation increases legal exposure.",
+      NCLEX: "Root cause analysis is confidential.",
+      STR: "Staff identities are not disclosed."
+    }
+  }
+},
+{
+  q: "Which documentation is legally appropriate in the medical record after a sentinel event?",
+  options: [
+    { text: "Objective patient condition and treatment provided", tag: "SCFHS" },
+    { text: "Details of the incident report", tag: "SAFE_DELAY" },
+    { text: "Statements admitting fault", tag: "NCLEX" },
+    { text: "Risk management conclusions", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "The chart reflects patient care only, not internal investigations.",
+    distractors: {
+      SAFE_DELAY: "Incident reports are separate.",
+      NCLEX: "Admissions of fault are inappropriate.",
+      STR: "Internal reviews are excluded."
+    }
+  }
+},
+{
+  q: "A nurse tells a family, 'I’m so sorry this happened to you.' What is the legal significance of this statement?",
+  options: [
+    { text: "It is an expression of empathy, not an admission of liability", tag: "SCFHS" },
+    { text: "It automatically admits negligence", tag: "SAFE_DELAY" },
+    { text: "It violates disclosure policy", tag: "NCLEX" },
+    { text: "It replaces formal disclosure", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Empathy is permitted and encouraged; it does not equal legal admission.",
+    distractors: {
+      SAFE_DELAY: "This is a common legal myth.",
+      NCLEX: "Empathy aligns with policy.",
+      STR: "Formal disclosure still occurs."
+    }
+  }
+},
+{
+  q: "When should an incident report related to a sentinel event be completed?",
+  options: [
+    { text: "As soon as patient safety is ensured", tag: "SCFHS" },
+    { text: "After legal consultation only", tag: "SAFE_DELAY" },
+    { text: "After family disclosure", tag: "NCLEX" },
+    { text: "Only if the patient requests it", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Timely reporting supports safety review and system improvement.",
+    distractors: {
+      SAFE_DELAY: "Legal consultation is not required to report.",
+      NCLEX: "Reporting is independent of disclosure timing.",
+      STR: "Reporting is mandatory regardless of request."
+    }
+  }
+},
+{
+  q: "Which action MOST increases legal risk after a sentinel event?",
+  options: [
+    { text: "Altering or late-entering documentation without notation", tag: "SCFHS" },
+    { text: "Notifying risk management", tag: "SAFE_DELAY" },
+    { text: "Providing factual disclosure", tag: "NCLEX" },
+    { text: "Completing an incident report", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Tampering with records is a major legal violation.",
+    distractors: {
+      SAFE_DELAY: "Notification reduces risk.",
+      NCLEX: "Disclosure is protective.",
+      STR: "Reporting supports transparency."
+    }
+  }
+},
+{
+  q: "A family asks, 'Who made this mistake?' What is the BEST response?",
+  options: [
+    { text: "Explain that the focus is on patient care and prevention, not blame", tag: "SCFHS" },
+    { text: "Identify the staff member involved", tag: "SAFE_DELAY" },
+    { text: "Refuse to answer and leave", tag: "NCLEX" },
+    { text: "Speculate about system failures", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Disclosure avoids blame while addressing safety and next steps.",
+    distractors: {
+      SAFE_DELAY: "Naming individuals is inappropriate.",
+      NCLEX: "Avoidance damages trust.",
+      STR: "Speculation is unsafe."
+    }
+  }
+},
+{
+  q: "Which statement about sentinel events is TRUE?",
+  options: [
+    { text: "They trigger mandatory internal review and system analysis", tag: "SCFHS" },
+    { text: "They always result in malpractice lawsuits", tag: "SAFE_DELAY" },
+    { text: "They should be concealed until investigation is complete", tag: "NCLEX" },
+    { text: "They are documented fully in the patient chart", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Sentinel events mandate review to prevent recurrence.",
+    distractors: {
+      SAFE_DELAY: "Litigation is not automatic.",
+      NCLEX: "Concealment is unethical.",
+      STR: "Charts exclude investigative content."
+    }
+  }
+},
+{
+  q: "What is the nurse’s role during formal sentinel event disclosure?",
+  options: [
+    { text: "Support the patient and clarify care plans", tag: "SCFHS" },
+    { text: "Lead the disclosure conversation", tag: "SAFE_DELAY" },
+    { text: "Provide legal explanations", tag: "NCLEX" },
+    { text: "Defend staff actions", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Nurses provide support and continuity, not legal defense or leadership.",
+    distractors: {
+      SAFE_DELAY: "Leadership is designated.",
+      NCLEX: "Legal counsel handles legal aspects.",
+      STR: "Defensiveness increases risk."
+    }
+  }
+},
+{
+  q: "An agitated patient is attempting to strike staff and remove monitoring lines. No consent can be obtained. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Initiate least-restrictive intervention to prevent immediate harm", tag: "SCFHS" },
+    { text: "Wait for a written restraint order", tag: "SAFE_DELAY" },
+    { text: "Administer PRN sedative without assessment", tag: "NCLEX" },
+    { text: "Explain consequences and threaten restraints", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Imminent danger permits immediate protective action using the least restrictive means.",
+    distractors: {
+      SAFE_DELAY: "Orders may follow when delay risks harm.",
+      NCLEX: "Medications require indication and assessment.",
+      STR: "Threats escalate behavior."
+    }
+  }
+},
+{
+  q: "Which condition legally JUSTIFIES emergency chemical restraint without consent?",
+  options: [
+    { text: "Imminent risk of serious harm to self or others", tag: "SCFHS" },
+    { text: "Refusal of routine care", tag: "SAFE_DELAY" },
+    { text: "History of aggression", tag: "NCLEX" },
+    { text: "Staff convenience during procedures", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Only immediate danger meets the threshold for emergency restraint.",
+    distractors: {
+      SAFE_DELAY: "Refusal alone is insufficient.",
+      NCLEX: "History does not equal imminent risk.",
+      STR: "Convenience is never justification."
+    }
+  }
+},
+{
+  q: "After initiating emergency restraints, what is REQUIRED next?",
+  options: [
+    { text: "Obtain a provider order and begin scheduled reassessments", tag: "SCFHS" },
+    { text: "Document once restraints are removed", tag: "SAFE_DELAY" },
+    { text: "Wait for family consent", tag: "NCLEX" },
+    { text: "Maintain restraints until behavior improves without reassessment", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Orders and ongoing reassessment are mandatory after emergency initiation.",
+    distractors: {
+      SAFE_DELAY: "Real-time documentation is required.",
+      NCLEX: "Family consent is not required in emergencies.",
+      STR: "Ongoing restraint without reassessment is unsafe."
+    }
+  }
+},
+{
+  q: "Which documentation BEST meets legal standards for restraint use?",
+  options: [
+    { text: "Observable behaviors, interventions attempted, patient response, and time-limited reassessment", tag: "SCFHS" },
+    { text: "Patient was aggressive and uncooperative", tag: "SAFE_DELAY" },
+    { text: "Staff felt unsafe", tag: "NCLEX" },
+    { text: "Psych patient required restraint", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Objective, behavior-based documentation protects patients and staff.",
+    distractors: {
+      SAFE_DELAY: "Judgmental language is inadequate.",
+      NCLEX: "Feelings are not clinical data.",
+      STR: "Labels lack specificity."
+    }
+  }
+},
+{
+  q: "Which action MOST increases legal exposure when administering emergency psych medication?",
+  options: [
+    { text: "Failing to reassess and document effect and adverse reactions", tag: "SCFHS" },
+    { text: "Using the lowest effective dose", tag: "SAFE_DELAY" },
+    { text: "Monitoring vital signs", tag: "NCLEX" },
+    { text: "Discontinuing once calm", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Lack of reassessment suggests punitive rather than therapeutic use.",
+    distractors: {
+      SAFE_DELAY: "Dose minimization reduces risk.",
+      NCLEX: "Monitoring is required.",
+      STR: "Timely discontinuation is appropriate."
+    }
+  }
+},
+{
+  q: "A patient regains capacity shortly after emergency restraint. What is the nurse’s PRIORITY?",
+  options: [
+    { text: "Discontinue restraints as soon as safely possible and inform the patient", tag: "SCFHS" },
+    { text: "Continue restraints until end of shift", tag: "SAFE_DELAY" },
+    { text: "Seek retroactive consent", tag: "NCLEX" },
+    { text: "Leave restraints until physician rounds", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Restraints are time-limited and must end when criteria resolve.",
+    distractors: {
+      SAFE_DELAY: "Shift convenience is inappropriate.",
+      NCLEX: "Retroactive consent is not required.",
+      STR: "Delay without indication is unsafe."
+    }
+  }
+},
+{
+  q: "Which statement is TRUE regarding involuntary treatment?",
+  options: [
+    { text: "It is justified only when capacity is impaired AND there is imminent risk", tag: "SCFHS" },
+    { text: "Any refusal allows involuntary treatment", tag: "SAFE_DELAY" },
+    { text: "Capacity equals legal competence", tag: "NCLEX" },
+    { text: "Once involuntary, consent is never required", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Both impaired capacity and imminent danger must be present.",
+    distractors: {
+      SAFE_DELAY: "Refusal alone is insufficient.",
+      NCLEX: "Capacity is clinical; competence is legal.",
+      STR: "Consent is revisited when capacity returns."
+    }
+  }
+},
+{
+  q: "During restraint monitoring, which finding requires IMMEDIATE action?",
+  options: [
+    { text: "Respiratory compromise or cyanosis", tag: "SCFHS" },
+    { text: "Patient verbal protest", tag: "SAFE_DELAY" },
+    { text: "Mild tachycardia", tag: "NCLEX" },
+    { text: "Family disagreement", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Physiologic compromise is an emergency.",
+    distractors: {
+      SAFE_DELAY: "Verbal protest alone is not emergent.",
+      NCLEX: "Mild changes require monitoring.",
+      STR: "Family concerns do not override safety."
+    }
+  }
+},
+{
+  q: "Which practice BEST aligns with least-restrictive standards?",
+  options: [
+    { text: "De-escalation, observation, and time-limited measures before restraint", tag: "SCFHS" },
+    { text: "Immediate four-point restraints for agitation", tag: "SAFE_DELAY" },
+    { text: "Chemical restraint for staff efficiency", tag: "NCLEX" },
+    { text: "Prolonged restraint to prevent recurrence", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Escalation follows failure of less restrictive options.",
+    distractors: {
+      SAFE_DELAY: "Immediate maximal restraint is excessive.",
+      NCLEX: "Efficiency is not indication.",
+      STR: "Prolonged restraint increases harm."
+    }
+  }
+},
+{
+  q: "Which documentation error is MOST damaging in restraint cases?",
+  options: [
+    { text: "Copy-pasting identical reassessments without new findings", tag: "SCFHS" },
+    { text: "Using standard restraint forms", tag: "SAFE_DELAY" },
+    { text: "Charting vital signs", tag: "NCLEX" },
+    { text: "Noting patient education after release", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Cloned notes imply lack of true reassessment.",
+    distractors: {
+      SAFE_DELAY: "Forms are acceptable when completed accurately.",
+      NCLEX: "Vitals are required.",
+      STR: "Education supports care continuity."
+    }
+  }
+},
+{
+  q: "A patient with a valid DNR becomes acutely dyspneic and anxious. What is the nurse’s PRIORITY action?",
+  options: [
+    { text: "Provide oxygen and comfort-focused interventions", tag: "SCFHS" },
+    { text: "Withhold all treatments due to DNR status", tag: "SAFE_DELAY" },
+    { text: "Initiate CPR if SpO₂ continues to drop", tag: "NCLEX" },
+    { text: "Wait for family to decide next steps", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "DNR limits resuscitation, not comfort or symptom relief.",
+    distractors: {
+      SAFE_DELAY: "DNR does not mean no care.",
+      NCLEX: "CPR violates a valid DNR.",
+      STR: "Family input cannot delay comfort care."
+    }
+  }
+},
+{
+  q: "A conscious patient with decision-making capacity states they want comfort care only, but the family insists on aggressive treatment. What should the nurse do?",
+  options: [
+    { text: "Honor the patient’s expressed wishes and notify the provider", tag: "SCFHS" },
+    { text: "Follow the family’s request to avoid conflict", tag: "SAFE_DELAY" },
+    { text: "Ask the family to sign consent for treatment", tag: "NCLEX" },
+    { text: "Delay care until ethics consult arrives", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A capacitated patient’s wishes override surrogate demands.",
+    distractors: {
+      SAFE_DELAY: "Conflict avoidance is not ethical care.",
+      NCLEX: "Family consent is unnecessary when capacity exists.",
+      STR: "Delaying violates patient autonomy."
+    }
+  }
+},
+{
+  q: "A patient with an advance directive refusing intubation is now unresponsive. Family demands intubation. What is the nurse’s BEST action?",
+  options: [
+    { text: "Follow the advance directive and provide supportive care", tag: "SCFHS" },
+    { text: "Intubate due to family insistence", tag: "SAFE_DELAY" },
+    { text: "Request a court order immediately", tag: "NCLEX" },
+    { text: "Wait until the attending physician arrives", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Advance directives guide care when the patient lacks capacity.",
+    distractors: {
+      SAFE_DELAY: "Family cannot override documented wishes.",
+      NCLEX: "Court orders are not required to honor directives.",
+      STR: "Delay risks unwanted invasive treatment."
+    }
+  }
+},
+{
+  q: "Which situation requires the nurse to INITIATE life-sustaining treatment despite a prior DNR?",
+  options: [
+    { text: "The patient clearly revokes the DNR while alert and oriented", tag: "SCFHS" },
+    { text: "The family disagrees with the DNR", tag: "SAFE_DELAY" },
+    { text: "The DNR is emotionally distressing to staff", tag: "NCLEX" },
+    { text: "The patient’s prognosis unexpectedly improves", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "A capacitated patient can revoke a DNR at any time.",
+    distractors: {
+      SAFE_DELAY: "Family disagreement is insufficient.",
+      NCLEX: "Staff distress does not change orders.",
+      STR: "Improved prognosis does not auto-revoke DNR."
+    }
+  }
+},
+{
+  q: "A terminally ill patient requests increased opioid dosing for severe dyspnea, understanding it may hasten death. What principle supports this action?",
+  options: [
+    { text: "Doctrine of double effect focused on symptom relief", tag: "SCFHS" },
+    { text: "Euthanasia by medication", tag: "SAFE_DELAY" },
+    { text: "Assisted suicide", tag: "NCLEX" },
+    { text: "Negligent overdose", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Primary intent is symptom relief, not death.",
+    distractors: {
+      SAFE_DELAY: "Intent distinguishes care from euthanasia.",
+      NCLEX: "Assisted suicide involves intent to cause death.",
+      STR: "Appropriate dosing with intent to relieve symptoms is not negligence."
+    }
+  }
+},
+{
+  q: "A surrogate decision-maker requests withdrawal of life support, but documentation shows the patient previously refused withdrawal. What should the nurse do?",
+  options: [
+    { text: "Advocate for honoring the patient’s prior expressed wishes", tag: "SCFHS" },
+    { text: "Follow the surrogate’s current request", tag: "SAFE_DELAY" },
+    { text: "Withdraw support to reduce suffering", tag: "NCLEX" },
+    { text: "Ignore documentation and wait", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Substituted judgment prioritizes known patient preferences.",
+    distractors: {
+      SAFE_DELAY: "Surrogates cannot contradict documented wishes.",
+      NCLEX: "Suffering alone does not justify ignoring directives.",
+      STR: "Ignoring records is unsafe."
+    }
+  }
+},
+{
+  q: "Which statement BEST differentiates palliative sedation from euthanasia?",
+  options: [
+    { text: "Palliative sedation aims to relieve refractory symptoms, not to cause death", tag: "SCFHS" },
+    { text: "Both intentionally hasten death", tag: "SAFE_DELAY" },
+    { text: "Euthanasia is allowed with consent", tag: "NCLEX" },
+    { text: "Sedation requires no documentation", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Intent and proportionality define palliative sedation.",
+    distractors: {
+      SAFE_DELAY: "Intent is fundamentally different.",
+      NCLEX: "Legality varies; intent remains key.",
+      STR: "Documentation is essential."
+    }
+  }
+},
+{
+  q: "A family demands CPR on a patient with a clearly visible, valid DNR bracelet. What should the nurse do?",
+  options: [
+    { text: "Follow the DNR and provide comfort while explaining care", tag: "SCFHS" },
+    { text: "Begin CPR to avoid confrontation", tag: "SAFE_DELAY" },
+    { text: "Remove the bracelet and resuscitate", tag: "NCLEX" },
+    { text: "Leave the room and call security", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Valid orders guide care despite family distress.",
+    distractors: {
+      SAFE_DELAY: "Fear of conflict does not justify violating orders.",
+      NCLEX: "Altering identifiers is unethical.",
+      STR: "Security does not address the clinical decision."
+    }
+  }
+},
+{
+  q: "Which documentation MOST protects the nurse legally in end-of-life conflicts?",
+  options: [
+    { text: "Exact patient statements, capacity assessment, orders reviewed, and actions taken", tag: "SCFHS" },
+    { text: "Family was upset and demanding", tag: "SAFE_DELAY" },
+    { text: "Physician told us what to do", tag: "NCLEX" },
+    { text: "End-of-life care provided", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Objective detail and order verification demonstrate safe practice.",
+    distractors: {
+      SAFE_DELAY: "Emotions alone lack clinical relevance.",
+      NCLEX: "Deflecting responsibility is insufficient.",
+      STR: "Vague entries offer little protection."
+    }
+  }
+},
+{
+  q: "When uncertainty exists about code status during a sudden arrest, what is the DEFAULT action?",
+  options: [
+    { text: "Initiate life-saving measures until status is verified", tag: "SCFHS" },
+    { text: "Assume DNR if terminally ill", tag: "SAFE_DELAY" },
+    { text: "Wait for family confirmation", tag: "NCLEX" },
+    { text: "Delay until documentation is found", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "In uncertainty, preserve life until orders are confirmed.",
+    distractors: {
+      SAFE_DELAY: "Assumptions risk wrongful death.",
+      NCLEX: "Family confirmation may be delayed or conflicted.",
+      STR: "Delay without action risks preventable death."
+    }
+  }
+},
+{
+  q: "A patient is found unresponsive after receiving a medication dose error and later dies. What is the nurse’s FIRST action?",
+  options: [
+    { text: "Initiate emergency response and provide life-saving measures", tag: "SCFHS" },
+    { text: "Complete an incident report immediately", tag: "NCLEX" },
+    { text: "Notify hospital administration", tag: "STR" },
+    { text: "Document the error in the medical record", tag: "SAFE_DELAY" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Patient safety and resuscitation take absolute priority over reporting.",
+    distractors: {
+      NCLEX: "Reporting does not precede emergency care.",
+      STR: "Administrative notification follows stabilization.",
+      SAFE_DELAY: "Documentation must not delay emergency response."
+    }
+  }
 }
 ];
 
