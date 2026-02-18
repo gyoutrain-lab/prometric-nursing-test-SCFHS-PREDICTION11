@@ -97,667 +97,184 @@ input, button {
 
 const questions = [
 {
-  stem: "A 68-year-old male admitted with pneumonia becomes acutely restless 30 minutes after admission. BP 88/54 mmHg, HR 124 bpm, RR 30/min, SpO₂ 89% on room air. Crackles are audible bilaterally.",
+  q: "A patient states, “I plan to kill myself tonight,” and has access to a firearm. What is the nurse’s PRIORITY action?",
   options: [
-    { text: "Notify the physician of the patient's condition", tag: "STR" },
-    { text: "Elevate the head of the bed to 45 degrees", tag: "SAFE_DELAY" },
-    { text: "Initiate supplemental oxygen therapy", tag: "SCFHS" },
-    { text: "Prepare for possible intubation", tag: "NCLEX" }
-  ],
-  correct: 2,
-  rationale: {
-    correct: "Although notifying the physician is appropriate, the patient demonstrates signs of impaired gas exchange with hypoxia requiring immediate nursing intervention. Elevating the head of the bed may improve ventilation; however, supplemental oxygen directly addresses hypoxia. Therefore, initiating oxygen therapy is the most appropriate first action.",
-    distractors: [
-      "This reflects escalation of care and aligns with STR protocols; however, SCFHS prioritizes immediate stabilization before notification.",
-      "This intervention may support ventilation but does not directly correct hypoxia.",
-      "This anticipates deterioration but bypasses immediate nursing actions required first."
-    ]
-  }
-},
-
-{
-  stem: "A 64-year-old male with COPD becomes increasingly drowsy after receiving morphine. RR 8/min, SpO₂ 91% on room air.",
-  options: [
-    { text: "Notify the physician immediately", tag: "STR" },
-    { text: "Apply supplemental oxygen", tag: "SAFE_DELAY" },
-    { text: "Assess respiratory effort and level of consciousness", tag: "SCFHS" },
-    { text: "Prepare naloxone for possible administration", tag: "NCLEX" }
+    { text: "Ensure immediate safety and initiate involuntary hold procedures", tag: "SCFHS" },
+    { text: "Respect the patient’s confidentiality", tag: "SAFE_DELAY" },
+    { text: "Encourage the patient to reconsider", tag: "NCLEX" },
+    { text: "Document the statement and continue assessment", tag: "STR" }
   ],
   correctTag: "SCFHS",
   rationale: {
-    correct: "Although opioid reversal and provider notification may be required, the patient demonstrates signs of respiratory depression requiring immediate nursing assessment. Evaluating respiratory effort and level of consciousness guides appropriate intervention, making this the most appropriate first action.",
+    correct: "Expressed intent with means constitutes imminent danger requiring immediate protective action.",
     distractors: {
-      STR: "This reflects escalation of care but delays immediate nursing assessment expected by SCFHS.",
-      SAFE_DELAY: "Oxygen does not correct hypoventilation and may worsen carbon dioxide retention.",
-      NCLEX: "Preparing reversal anticipates deterioration but bypasses the required first assessment."
-    }
-  }
-},
-
-{
-  stem: "A postoperative patient suddenly develops stridor and agitation 30 minutes after extubation.",
-  options: [
-    { text: "Apply oxygen via face mask", tag: "SCFHS" },
-    { text: "Notify anesthesia immediately", tag: "STR" },
-    { text: "Place the patient in a supine position", tag: "SAFE_DELAY" },
-    { text: "Prepare emergency airway equipment", tag: "NCLEX" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Although airway equipment preparation and provider notification are appropriate, the patient demonstrates acute airway compromise. Immediate oxygen administration supports oxygenation while further interventions are initiated, making this the most appropriate first action.",
-    distractors: {
-      STR: "Notification delays immediate stabilization.",
-      SAFE_DELAY: "Supine positioning may worsen airway obstruction.",
-      NCLEX: "Preparation is appropriate but secondary to immediate oxygen support."
-    }
-  }
-},
-
-{
-  stem: "A patient with sepsis has BP 84/48 mmHg, HR 122 bpm, and urine output of 15 mL/hr.",
-  options: [
-    { text: "Increase IV fluids as prescribed", tag: "SCFHS" },
-    { text: "Notify the physician of hypotension", tag: "STR" },
-    { text: "Insert a Foley catheter", tag: "NCLEX" },
-    { text: "Document intake and output", tag: "SAFE_DELAY" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Although provider notification and further assessment are appropriate, the patient demonstrates hypoperfusion. Increasing IV fluids as prescribed directly supports circulation and is the most appropriate immediate nursing action.",
-    distractors: {
-      STR: "Escalation without intervention delays stabilization.",
-      NCLEX: "Assessment is secondary to restoring perfusion.",
-      SAFE_DELAY: "Documentation does not address shock."
-    }
-  }
-},
-
-{
-  stem: "A diabetic patient becomes confused and diaphoretic. Capillary glucose is 38 mg/dL.",
-  options: [
-    { text: "Administer IV dextrose", tag: "SCFHS" },
-    { text: "Notify the physician immediately", tag: "STR" },
-    { text: "Recheck blood glucose in 15 minutes", tag: "SAFE_DELAY" },
-    { text: "Document the findings", tag: "SAFE_DELAY" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Although provider notification is appropriate, the patient demonstrates symptomatic hypoglycemia requiring immediate correction. Administering IV dextrose rapidly restores glucose levels and prevents neurologic injury.",
-    distractors: {
-      STR: "Notification delays treatment.",
-      SAFE_DELAY: "Delays correction of a life-threatening condition."
+      SAFE_DELAY: "Confidentiality does not apply when life is at risk.",
+      NCLEX: "Therapeutic communication cannot replace safety measures.",
+      STR: "Documentation alone is insufficient."
     }
   }
 },
 {
-stem:"A 64-year-old male with COPD becomes drowsy after receiving morphine. RR 8/min, SpO₂ 91% on room air.",
-options:[
-{ text:"Notify the physician immediately", tag:"STR" },
-{ text:"Apply supplemental oxygen", tag:"SAFE_DELAY" },
-{ text:"Assess respiratory effort and level of consciousness", tag:"SCFHS" },
-{ text:"Prepare naloxone for possible use", tag:"NCLEX" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although opioid reversal and provider notification may be required, the patient demonstrates respiratory depression that requires immediate nursing assessment. Assessing respiratory effort and level of consciousness guides safe and timely intervention, making this the most appropriate first action.",
-distractors:{
-STR:"Escalation without assessment delays immediate nursing responsibility.",
-SAFE_DELAY:"Oxygen does not correct hypoventilation and may worsen CO₂ retention.",
-NCLEX:"Preparation anticipates deterioration but bypasses required assessment."
-}
-}
-},
-
-/* ===================== 2 ===================== */
-{
-stem:"Thirty minutes after extubation, a postoperative patient develops stridor and agitation.",
-options:[
-{ text:"Apply oxygen via face mask", tag:"SCFHS" },
-{ text:"Notify anesthesia immediately", tag:"STR" },
-{ text:"Place the patient supine", tag:"SAFE_DELAY" },
-{ text:"Prepare emergency airway equipment", tag:"NCLEX" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although notification and airway preparation are appropriate, the patient demonstrates acute airway compromise. Immediate oxygen administration supports oxygenation while further interventions are initiated.",
-distractors:{
-STR:"Notification delays immediate stabilization.",
-SAFE_DELAY:"Supine positioning may worsen airway obstruction.",
-NCLEX:"Preparation is appropriate but secondary to immediate support."
-}
-}
-},
-
-/* ===================== 3 ===================== */
-{
-stem:"A patient with pneumonia becomes restless and cyanotic. SpO₂ 85% on room air, RR 32/min.",
-options:[
-{ text:"Initiate high-flow oxygen therapy", tag:"SCFHS" },
-{ text:"Notify the provider", tag:"STR" },
-{ text:"Obtain arterial blood gases", tag:"NCLEX" },
-{ text:"Document findings", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although diagnostics and provider notification are appropriate, the patient exhibits severe hypoxemia. Immediate oxygen therapy directly addresses impaired gas exchange.",
-distractors:{
-STR:"Escalation delays correction of hypoxia.",
-NCLEX:"Diagnostics do not stabilize the patient.",
-SAFE_DELAY:"Documentation does not address instability."
-}
-}
-},
-
-/* ===================== 4 ===================== */
-{
-stem:"A trauma patient becomes hypotensive with distended neck veins and tachycardia.",
-options:[
-{ text:"Administer high-flow oxygen", tag:"SCFHS" },
-{ text:"Notify the trauma team", tag:"STR" },
-{ text:"Position the patient flat", tag:"SAFE_DELAY" },
-{ text:"Prepare for chest tube insertion", tag:"NCLEX" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although definitive management is required, immediate oxygen administration supports tissue oxygenation during suspected obstructive shock.",
-distractors:{
-STR:"Notification delays immediate support.",
-SAFE_DELAY:"Positioning does not correct hypoxia.",
-NCLEX:"Preparation anticipates treatment but delays stabilization."
-}
-}
-},
-
-/* ===================== 5 ===================== */
-{
-stem:"A patient with sepsis has BP 84/48 mmHg, HR 122 bpm, urine output 15 mL/hr.",
-options:[
-{ text:"Increase IV fluids as prescribed", tag:"SCFHS" },
-{ text:"Notify the physician of hypotension", tag:"STR" },
-{ text:"Insert a Foley catheter", tag:"NCLEX" },
-{ text:"Document intake and output", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although escalation and further assessment are appropriate, the patient demonstrates hypoperfusion. Increasing IV fluids directly supports circulation.",
-distractors:{
-STR:"Escalation without intervention delays stabilization.",
-NCLEX:"Assessment is secondary to restoring perfusion.",
-SAFE_DELAY:"Documentation does not address shock."
-}
-}
-},
-
-/* ===================== 6 ===================== */
-{
-stem:"A diabetic patient becomes confused and diaphoretic. Capillary glucose is 38 mg/dL.",
-options:[
-{ text:"Administer IV dextrose", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Recheck glucose in 15 minutes", tag:"SAFE_DELAY" },
-{ text:"Document the finding", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although provider notification is appropriate, the patient demonstrates symptomatic hypoglycemia requiring immediate correction.",
-distractors:{
-STR:"Notification delays treatment.",
-SAFE_DELAY:"Delays correction of a life-threatening condition."
-}
-}
-},
-
-/* ===================== 7 ===================== */
-{
-stem:"A patient suddenly develops unilateral weakness and slurred speech 45 minutes ago.",
-options:[
-{ text:"Activate stroke protocol", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Perform a full neurologic assessment", tag:"NCLEX" },
-{ text:"Document neurologic findings", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although assessment and notification are necessary, activating the stroke protocol ensures timely intervention within the therapeutic window.",
-distractors:{
-STR:"Notification alone delays protocol activation.",
-NCLEX:"Assessment delays time-sensitive care.",
-SAFE_DELAY:"Documentation does not address urgency."
-}
-}
-},
-
-/* ===================== 8 ===================== */
-{
-stem:"A postoperative patient has a saturated dressing and BP 90/56 mmHg.",
-options:[
-{ text:"Apply pressure to the surgical site", tag:"SCFHS" },
-{ text:"Notify the surgeon immediately", tag:"STR" },
-{ text:"Change the dressing", tag:"SAFE_DELAY" },
-{ text:"Document blood loss", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although provider notification is required, applying pressure directly addresses active bleeding and supports hemodynamic stability.",
-distractors:{
-STR:"Escalation without control delays stabilization.",
-SAFE_DELAY:"Changing or documenting delays hemorrhage control."
-}
-}
-},
-
-/* ===================== 9 ===================== */
-{
-stem:"A patient receiving potassium infusion reports burning at the IV site.",
-options:[
-{ text:"Stop the infusion and assess the site", tag:"SCFHS" },
-{ text:"Notify the provider", tag:"STR" },
-{ text:"Slow the infusion rate", tag:"SAFE_DELAY" },
-{ text:"Document the complaint", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Stopping the infusion prevents tissue injury while allowing assessment of possible infiltration.",
-distractors:{
-STR:"Notification delays immediate safety action.",
-SAFE_DELAY:"Slowing or documenting does not prevent injury."
-}
-}
-},
-
-/* ===================== 10 ===================== */
-{
-stem:"A patient develops wheezing, urticaria, and hypotension after antibiotic administration.",
-options:[
-{ text:"Stop the infusion and administer oxygen", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document the reaction", tag:"SAFE_DELAY" },
-{ text:"Obtain vital signs", tag:"NCLEX" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Although further management is required, stopping the infusion and supporting oxygenation address anaphylaxis immediately.",
-distractors:{
-STR:"Notification delays lifesaving action.",
-SAFE_DELAY:"Documentation delays treatment.",
-NCLEX:"Assessment is secondary to intervention."
-}
-}
+  q: "A patient with acute psychosis is pacing and threatening staff but has not attempted harm. What is the nurse’s FIRST intervention?",
+  options: [
+    { text: "Use verbal de-escalation techniques", tag: "SCFHS" },
+    { text: "Apply physical restraints immediately", tag: "SAFE_DELAY" },
+    { text: "Administer PRN antipsychotic medication", tag: "NCLEX" },
+    { text: "Call security to restrain the patient", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Least-restrictive interventions must be attempted before restraints or medications.",
+    distractors: {
+      SAFE_DELAY: "Restraints are last-resort measures.",
+      NCLEX: "Medication without de-escalation may violate rights.",
+      STR: "Security escalates the situation prematurely."
+    }
+  }
 },
 {
-stem:"A patient with heart failure suddenly develops crackles, pink frothy sputum, and severe dyspnea.",
-options:[
-{ text:"Place the patient in high Fowler’s position", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Prepare for intubation", tag:"NCLEX" },
-{ text:"Document respiratory findings", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Positioning the patient upright immediately reduces venous return and improves lung expansion, making it the priority action in acute pulmonary edema.",
-distractors:{
-STR:"Notification delays immediate respiratory relief.",
-NCLEX:"Preparation anticipates deterioration but does not stabilize now.",
-SAFE_DELAY:"Documentation does not address distress."
-}
-}
-},
-
-/* ===================== 12 ===================== */
-{
-stem:"A patient receiving a blood transfusion develops fever, chills, and flank pain.",
-options:[
-{ text:"Stop the transfusion immediately", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Slow the transfusion rate", tag:"SAFE_DELAY" },
-{ text:"Document the reaction", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Stopping the transfusion prevents further antigen exposure and is the immediate lifesaving action in a suspected transfusion reaction.",
-distractors:{
-STR:"Notification follows emergency intervention.",
-SAFE_DELAY:"Slowing or documenting delays patient safety."
-}
-}
-},
-
-/* ===================== 13 ===================== */
-{
-stem:"A confused elderly patient is attempting to climb out of bed despite fall precautions.",
-options:[
-{ text:"Stay with the patient and ensure safety", tag:"SCFHS" },
-{ text:"Apply physical restraints", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document the behavior", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Immediate supervision prevents injury and respects least-restrictive safety principles.",
-distractors:{
-SAFE_DELAY:"Restraints require assessment and orders.",
-STR:"Notification delays injury prevention."
-}
-}
-},
-
-/* ===================== 14 ===================== */
-{
-stem:"A patient with chest pain suddenly becomes unresponsive and pulseless.",
-options:[
-{ text:"Initiate CPR immediately", tag:"SCFHS" },
-{ text:"Call the code team", tag:"STR" },
-{ text:"Attach cardiac monitor", tag:"NCLEX" },
-{ text:"Document the event", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Immediate CPR maintains circulation and oxygenation and is the priority in cardiac arrest.",
-distractors:{
-STR:"Calling for help follows initiation of CPR.",
-NCLEX:"Monitoring delays circulation support."
-}
-}
-},
-
-/* ===================== 15 ===================== */
-{
-stem:"A postoperative patient reports sudden calf pain and unilateral leg swelling.",
-options:[
-{ text:"Keep the patient on bed rest", tag:"SCFHS" },
-{ text:"Massage the affected leg", tag:"SAFE_DELAY" },
-{ text:"Encourage ambulation", tag:"SAFE_DELAY" },
-{ text:"Apply warm compresses", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Suspected deep vein thrombosis requires immobility to prevent embolization.",
-distractors:{
-SAFE_DELAY:"Massage, ambulation, or heat increases embolus risk."
-}
-}
-},
-
-/* ===================== 16 ===================== */
-{
-stem:"A patient with a tracheostomy becomes restless with decreased oxygen saturation.",
-options:[
-{ text:"Assess patency of the tracheostomy tube", tag:"SCFHS" },
-{ text:"Notify respiratory therapy", tag:"STR" },
-{ text:"Increase oxygen concentration", tag:"SAFE_DELAY" },
-{ text:"Document respiratory status", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Airway obstruction must be ruled out before escalating care.",
-distractors:{
-STR:"Notification delays airway assessment.",
-SAFE_DELAY:"Oxygen does not correct obstruction."
-}
-}
-},
-
-/* ===================== 17 ===================== */
-{
-stem:"A patient receiving chemotherapy reports oral pain and difficulty swallowing.",
-options:[
-{ text:"Inspect the oral mucosa", tag:"SCFHS" },
-{ text:"Administer prescribed analgesics", tag:"NCLEX" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document symptoms", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Assessment identifies mucositis severity and guides further interventions.",
-distractors:{
-NCLEX:"Medication follows assessment.",
-STR:"Notification without assessment delays care."
-}
-}
-},
-
-/* ===================== 18 ===================== */
-{
-stem:"A patient with chronic kidney disease has potassium level of 6.2 mEq/L.",
-options:[
-{ text:"Place the patient on cardiac monitoring", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Restrict dietary potassium", tag:"SAFE_DELAY" },
-{ text:"Document the result", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Hyperkalemia poses immediate risk for lethal arrhythmias; monitoring is essential.",
-distractors:{
-STR:"Notification follows patient safety measures.",
-SAFE_DELAY:"Dietary changes are not immediate."
-}
-}
-},
-
-/* ===================== 19 ===================== */
-{
-stem:"A patient suddenly complains of severe headache and photophobia.",
-options:[
-{ text:"Assess neurologic status immediately", tag:"SCFHS" },
-{ text:"Administer prescribed analgesic", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Dim the lights", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Neurologic assessment identifies life-threatening causes such as intracranial hemorrhage.",
-distractors:{
-SAFE_DELAY:"Symptom relief delays diagnosis.",
-STR:"Notification follows assessment."
-}
-}
-},
-
-/* ===================== 20 ===================== */
-{
-stem:"A patient receiving insulin becomes shaky and pale.",
-options:[
-{ text:"Check capillary blood glucose", tag:"SCFHS" },
-{ text:"Administer insulin as scheduled", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document appearance", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Assessment confirms hypoglycemia before intervention.",
-distractors:{
-SAFE_DELAY:"Giving insulin may worsen hypoglycemia."
-}
-}
+  q: "A patient requests discharge from a psychiatric unit but is actively hallucinating and unable to care for self. What is the nurse’s BEST response?",
+  options: [
+    { text: "Notify the provider to evaluate for involuntary hold", tag: "SCFHS" },
+    { text: "Honor the discharge request immediately", tag: "SAFE_DELAY" },
+    { text: "Ask the family to convince the patient to stay", tag: "NCLEX" },
+    { text: "Document the request and take no action", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Inability to meet basic needs may justify involuntary commitment.",
+    distractors: {
+      SAFE_DELAY: "Discharge may result in harm.",
+      NCLEX: "Family persuasion does not replace legal process.",
+      STR: "Inaction violates duty to protect."
+    }
+  }
 },
 {
-stem:"A postoperative patient suddenly becomes tachycardic, hypotensive, and has decreased urine output.",
-options:[
-{ text:"Assess for signs of hemorrhage", tag:"SCFHS" },
-{ text:"Notify the physician immediately", tag:"STR" },
-{ text:"Increase IV fluids per protocol", tag:"NCLEX" },
-{ text:"Document vital sign changes", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"The patient demonstrates signs of hypovolemic shock; identifying active bleeding is the priority before initiating or escalating treatment.",
-distractors:{
-STR:"Notification follows rapid assessment.",
-NCLEX:"Intervention without identifying cause is unsafe.",
-SAFE_DELAY:"Documentation delays lifesaving action."
-}
-}
+  q: "A patient under involuntary psychiatric hold requests to leave the unit. What should the nurse explain?",
+  options: [
+    { text: "The patient may not leave until legally released", tag: "SCFHS" },
+    { text: "The hold overrides all patient rights", tag: "SAFE_DELAY" },
+    { text: "The nurse will decide when discharge is safe", tag: "NCLEX" },
+    { text: "The patient may leave if accompanied by family", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Involuntary hold restricts freedom of movement but not all rights.",
+    distractors: {
+      SAFE_DELAY: "Patients retain legal protections.",
+      NCLEX: "Nurses do not determine legal release.",
+      STR: "Family presence does not void a hold."
+    }
+  }
 },
-
-/* ===================== 22 ===================== */
 {
-stem:"A patient with diabetes reports numbness and tingling in both feet.",
-options:[
-{ text:"Assess sensory perception in the feet", tag:"SCFHS" },
-{ text:"Administer prescribed analgesics", tag:"NCLEX" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document the complaint", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Assessment confirms peripheral neuropathy and establishes baseline neurologic status.",
-distractors:{
-NCLEX:"Medication follows assessment.",
-STR:"Notification without assessment delays care."
-}
-}
+  q: "A patient threatens to harm a specific individual after discharge. What is the nurse’s LEGAL duty?",
+  options: [
+    { text: "Report the threat according to duty-to-warn laws", tag: "SCFHS" },
+    { text: "Maintain confidentiality", tag: "SAFE_DELAY" },
+    { text: "Document the threat without reporting", tag: "NCLEX" },
+    { text: "Ask the patient to sign a no-harm agreement", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Credible threats trigger a duty to protect potential victims.",
+    distractors: {
+      SAFE_DELAY: "Confidentiality is overridden by risk of harm.",
+      NCLEX: "Documentation alone does not protect others.",
+      STR: "Agreements have no legal force."
+    }
+  }
 },
-
-/* ===================== 23 ===================== */
 {
-stem:"A patient receiving IV antibiotics develops wheezing and facial swelling.",
-options:[
-{ text:"Stop the infusion immediately", tag:"SCFHS" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Administer prescribed antihistamine", tag:"NCLEX" },
-{ text:"Slow the infusion rate", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Anaphylaxis is suspected; stopping the offending agent prevents further exposure.",
-distractors:{
-STR:"Notification follows emergency action.",
-NCLEX:"Medication is secondary to stopping exposure."
-}
-}
+  q: "Which situation MOST justifies involuntary psychiatric commitment?",
+  options: [
+    { text: "Patient poses an immediate danger to self or others", tag: "SCFHS" },
+    { text: "Patient refuses prescribed medication", tag: "SAFE_DELAY" },
+    { text: "Patient displays unusual beliefs", tag: "NCLEX" },
+    { text: "Patient is homeless and unemployed", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Imminent risk is the legal threshold for involuntary commitment.",
+    distractors: {
+      SAFE_DELAY: "Refusal alone is insufficient.",
+      NCLEX: "Beliefs are protected unless dangerous.",
+      STR: "Social issues do not justify commitment."
+    }
+  }
 },
-
-/* ===================== 24 ===================== */
 {
-stem:"A patient with COPD is using accessory muscles to breathe.",
-options:[
-{ text:"Assess respiratory rate and oxygen saturation", tag:"SCFHS" },
-{ text:"Administer PRN bronchodilator", tag:"NCLEX" },
-{ text:"Notify respiratory therapy", tag:"STR" },
-{ text:"Document respiratory effort", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Objective assessment determines severity and guides immediate intervention.",
-distractors:{
-NCLEX:"Medication requires assessment first.",
-STR:"Notification delays bedside evaluation."
-}
-}
+  q: "A patient calms after restraint application. What is the nurse’s NEXT responsibility?",
+  options: [
+    { text: "Remove restraints as soon as it is safe", tag: "SCFHS" },
+    { text: "Keep restraints until the end of shift", tag: "SAFE_DELAY" },
+    { text: "Wait for family approval", tag: "NCLEX" },
+    { text: "Document and leave restraints in place", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Restraints must be discontinued at the earliest safe opportunity.",
+    distractors: {
+      SAFE_DELAY: "Prolonged restraint violates patient rights.",
+      NCLEX: "Family consent is not required.",
+      STR: "Documentation does not justify continued restraint."
+    }
+  }
 },
-
-/* ===================== 25 ===================== */
 {
-stem:"A hospitalized patient suddenly becomes confused and disoriented.",
-options:[
-{ text:"Assess oxygenation and vital signs", tag:"SCFHS" },
-{ text:"Apply physical restraints", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document mental status", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Acute confusion may indicate hypoxia or infection; physiologic causes must be ruled out first.",
-distractors:{
-SAFE_DELAY:"Restraints or documentation do not address cause.",
-STR:"Notification follows assessment."
-}
-}
+  q: "A nurse suspects a patient lacks decision-making capacity. What is the nurse’s FIRST step?",
+  options: [
+    { text: "Notify the provider for formal evaluation", tag: "SCFHS" },
+    { text: "Assume incapacity based on behavior", tag: "SAFE_DELAY" },
+    { text: "Ask family to make decisions immediately", tag: "NCLEX" },
+    { text: "Proceed with involuntary treatment", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Capacity determinations require formal evaluation.",
+    distractors: {
+      SAFE_DELAY: "Behavior alone does not determine capacity.",
+      NCLEX: "Family involvement follows assessment.",
+      STR: "Treatment without evaluation is unlawful."
+    }
+  }
 },
-
-/* ===================== 26 ===================== */
 {
-stem:"A patient receiving enteral feeding develops coughing and gurgling sounds.",
-options:[
-{ text:"Stop the feeding and assess airway", tag:"SCFHS" },
-{ text:"Increase feeding rate", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document findings", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Aspiration risk requires immediate cessation of feeding and airway assessment.",
-distractors:{
-STR:"Notification follows stabilization.",
-SAFE_DELAY:"Continuing feed increases risk."
-}
-}
+  q: "A patient under involuntary hold refuses medication. What is the nurse’s MOST appropriate action?",
+  options: [
+    { text: "Assess risk and follow legal process for forced medication", tag: "SCFHS" },
+    { text: "Administer medication anyway", tag: "SAFE_DELAY" },
+    { text: "Discharge the patient", tag: "NCLEX" },
+    { text: "Threaten continued hospitalization", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Even involuntarily held patients retain rights regarding treatment unless legally overridden.",
+    distractors: {
+      SAFE_DELAY: "Forced medication without authorization is assault.",
+      NCLEX: "Discharge may be unsafe.",
+      STR: "Coercion violates ethical standards."
+    }
+  }
 },
-
-/* ===================== 27 ===================== */
 {
-stem:"A patient with a central venous catheter has redness and drainage at the insertion site.",
-options:[
-{ text:"Assess for signs of infection and obtain vital signs", tag:"SCFHS" },
-{ text:"Change the dressing", tag:"NCLEX" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document the site appearance", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Assessment determines severity of possible catheter-related infection.",
-distractors:{
-NCLEX:"Intervention without assessment is incomplete.",
-STR:"Notification follows data collection."
-}
-}
-},
-
-/* ===================== 28 ===================== */
-{
-stem:"A patient receiving opioids becomes increasingly drowsy with shallow respirations.",
-options:[
-{ text:"Assess respiratory rate and oxygen saturation", tag:"SCFHS" },
-{ text:"Administer next opioid dose", tag:"SAFE_DELAY" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document sedation level", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Respiratory depression is a life-threatening complication requiring immediate assessment.",
-distractors:{
-SAFE_DELAY:"Medication or documentation delays intervention."
-}
-}
-},
-
-/* ===================== 29 ===================== */
-{
-stem:"A patient with sepsis has a temperature of 39.2°C and rising heart rate.",
-options:[
-{ text:"Assess hemodynamic status and urine output", tag:"SCFHS" },
-{ text:"Administer antipyretics", tag:"NCLEX" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document temperature", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Progression toward septic shock must be identified through perfusion assessment.",
-distractors:{
-NCLEX:"Symptom control does not address perfusion.",
-STR:"Notification follows assessment."
-}
-}
-},
-
-/* ===================== 30 ===================== */
-{
-stem:"A patient suddenly reports inability to speak and right-sided weakness.",
-options:[
-{ text:"Activate the stroke protocol immediately", tag:"SCFHS" },
-{ text:"Check blood glucose", tag:"NCLEX" },
-{ text:"Notify the physician", tag:"STR" },
-{ text:"Document neurologic findings", tag:"SAFE_DELAY" }
-],
-correctTag:"SCFHS",
-rationale:{
-correct:"Acute stroke symptoms require immediate protocol activation to preserve neurologic function.",
-distractors:{
-NCLEX:"Assessment is secondary to time-critical response.",
-STR:"Notification is embedded in protocol."
-}
-}
+  q: "A patient expresses passive death wishes but denies intent or plan. What is the nurse’s BEST action?",
+  options: [
+    { text: "Conduct further suicide risk assessment", tag: "SCFHS" },
+    { text: "Initiate involuntary hold immediately", tag: "SAFE_DELAY" },
+    { text: "Dismiss the statement as attention-seeking", tag: "NCLEX" },
+    { text: "Document and end the conversation", tag: "STR" }
+  ],
+  correctTag: "SCFHS",
+  rationale: {
+    correct: "Further assessment is needed when risk is unclear.",
+    distractors: {
+      SAFE_DELAY: "Hold requires imminent danger.",
+      NCLEX: "Dismissal may miss escalation.",
+      STR: "Ending assessment is unsafe."
+    }
+  }
 }
 ];
 
