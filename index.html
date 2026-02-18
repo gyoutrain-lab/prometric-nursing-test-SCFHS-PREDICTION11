@@ -9,7 +9,6 @@ body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   margin: 0;
-  padding: 0;
 }
 .container {
   max-width: 900px;
@@ -21,12 +20,10 @@ body {
 h1, h2 {
   text-align: center;
 }
-.hidden {
-  display: none;
-}
+.hidden { display: none; }
 input, button {
   padding: 10px;
-  margin: 5px 0;
+  margin: 6px 0;
   width: 100%;
   font-size: 16px;
 }
@@ -36,18 +33,10 @@ input, button {
   margin-top: 8px;
   cursor: pointer;
 }
-.option:hover {
-  background: #eef2f5;
-}
-.option.selected {
-  background: #d9e8ff;
-}
-.correct {
-  border-left: 6px solid green;
-}
-.wrong {
-  border-left: 6px solid red;
-}
+.option:hover { background: #eef2f5; }
+.option.selected { background: #d9e8ff; }
+.option.correct { border-left: 6px solid green; }
+.option.wrong { border-left: 6px solid red; }
 .rationale {
   background: #f9fafb;
   border: 1px solid #ccc;
@@ -94,7 +83,6 @@ input, button {
 
 <script>
 // ================= QUESTIONS =================
-
 const questions = [
 {
   q: "A patient states, “I plan to kill myself tonight,” and has access to a firearm. What is the nurse’s PRIORITY action?",
@@ -185,220 +173,106 @@ const questions = [
       STR: "Agreements have no legal force."
     }
   }
-},
-{
-  q: "Which situation MOST justifies involuntary psychiatric commitment?",
-  options: [
-    { text: "Patient poses an immediate danger to self or others", tag: "SCFHS" },
-    { text: "Patient refuses prescribed medication", tag: "SAFE_DELAY" },
-    { text: "Patient displays unusual beliefs", tag: "NCLEX" },
-    { text: "Patient is homeless and unemployed", tag: "STR" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Imminent risk is the legal threshold for involuntary commitment.",
-    distractors: {
-      SAFE_DELAY: "Refusal alone is insufficient.",
-      NCLEX: "Beliefs are protected unless dangerous.",
-      STR: "Social issues do not justify commitment."
-    }
-  }
-},
-{
-  q: "A patient calms after restraint application. What is the nurse’s NEXT responsibility?",
-  options: [
-    { text: "Remove restraints as soon as it is safe", tag: "SCFHS" },
-    { text: "Keep restraints until the end of shift", tag: "SAFE_DELAY" },
-    { text: "Wait for family approval", tag: "NCLEX" },
-    { text: "Document and leave restraints in place", tag: "STR" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Restraints must be discontinued at the earliest safe opportunity.",
-    distractors: {
-      SAFE_DELAY: "Prolonged restraint violates patient rights.",
-      NCLEX: "Family consent is not required.",
-      STR: "Documentation does not justify continued restraint."
-    }
-  }
-},
-{
-  q: "A nurse suspects a patient lacks decision-making capacity. What is the nurse’s FIRST step?",
-  options: [
-    { text: "Notify the provider for formal evaluation", tag: "SCFHS" },
-    { text: "Assume incapacity based on behavior", tag: "SAFE_DELAY" },
-    { text: "Ask family to make decisions immediately", tag: "NCLEX" },
-    { text: "Proceed with involuntary treatment", tag: "STR" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Capacity determinations require formal evaluation.",
-    distractors: {
-      SAFE_DELAY: "Behavior alone does not determine capacity.",
-      NCLEX: "Family involvement follows assessment.",
-      STR: "Treatment without evaluation is unlawful."
-    }
-  }
-},
-{
-  q: "A patient under involuntary hold refuses medication. What is the nurse’s MOST appropriate action?",
-  options: [
-    { text: "Assess risk and follow legal process for forced medication", tag: "SCFHS" },
-    { text: "Administer medication anyway", tag: "SAFE_DELAY" },
-    { text: "Discharge the patient", tag: "NCLEX" },
-    { text: "Threaten continued hospitalization", tag: "STR" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Even involuntarily held patients retain rights regarding treatment unless legally overridden.",
-    distractors: {
-      SAFE_DELAY: "Forced medication without authorization is assault.",
-      NCLEX: "Discharge may be unsafe.",
-      STR: "Coercion violates ethical standards."
-    }
-  }
-},
-{
-  q: "A patient expresses passive death wishes but denies intent or plan. What is the nurse’s BEST action?",
-  options: [
-    { text: "Conduct further suicide risk assessment", tag: "SCFHS" },
-    { text: "Initiate involuntary hold immediately", tag: "SAFE_DELAY" },
-    { text: "Dismiss the statement as attention-seeking", tag: "NCLEX" },
-    { text: "Document and end the conversation", tag: "STR" }
-  ],
-  correctTag: "SCFHS",
-  rationale: {
-    correct: "Further assessment is needed when risk is unclear.",
-    distractors: {
-      SAFE_DELAY: "Hold requires imminent danger.",
-      NCLEX: "Dismissal may miss escalation.",
-      STR: "Ending assessment is unsafe."
-    }
-  }
 }
 ];
 
 // ================= ENGINE =================
-
 let shuffledQuestions = [];
 let currentIndex = 0;
-let selectedOption = null;
+let selectedIndex = null;
 
-let score = {
-  SCFHS: 0,
-  NCLEX: 0,
-  STR: 0,
-  SAFE_DELAY: 0
-};
+let score = { SCFHS:0, NCLEX:0, STR:0, SAFE_DELAY:0 };
 
-function shuffle(array) {
-  return array.sort(() => Math.random() - 0.5);
+function shuffle(arr) {
+  return [...arr].sort(() => Math.random() - 0.5);
 }
 
 function startExam() {
-  const name = document.getElementById("candidateName").value.trim();
-  const id = document.getElementById("candidateID").value.trim();
-  if (!name || !id) {
-    alert("Enter Name and ID");
-    return;
-  }
+  const name = candidateName.value.trim();
+  const id = candidateID.value.trim();
+  if (!name || !id) return alert("Enter Name and ID");
 
-  shuffledQuestions = shuffle([...questions]);
-  shuffledQuestions.forEach(q => q.options = shuffle(q.options));
+  shuffledQuestions = shuffle(questions).map(q => ({
+    ...q,
+    options: shuffle(q.options)
+  }));
 
-  document.getElementById("startScreen").classList.add("hidden");
-  document.getElementById("examScreen").classList.remove("hidden");
-
+  startScreen.classList.add("hidden");
+  examScreen.classList.remove("hidden");
   loadQuestion();
 }
 
 function loadQuestion() {
-  selectedOption = null;
-  document.getElementById("rationaleBox").classList.add("hidden");
-  document.getElementById("nextBtn").classList.add("hidden");
+  selectedIndex = null;
+  rationaleBox.classList.add("hidden");
+  nextBtn.classList.add("hidden");
 
   const q = shuffledQuestions[currentIndex];
-  document.getElementById("qCounter").innerText = `Question ${currentIndex + 1} of ${shuffledQuestions.length}`;
-  document.getElementById("questionText").innerText = q.stem;
+  qCounter.innerText = `Question ${currentIndex + 1} of ${shuffledQuestions.length}`;
+  questionText.innerText = q.q;
 
-  const optionsDiv = document.getElementById("options");
-  optionsDiv.innerHTML = "";
-
-  q.options.forEach((opt, index) => {
+  options.innerHTML = "";
+  q.options.forEach((opt, i) => {
     const div = document.createElement("div");
     div.className = "option";
     div.innerText = opt.text;
-    div.onclick = () => selectOption(div, index);
-    optionsDiv.appendChild(div);
+    div.onclick = () => selectOption(div, i);
+    options.appendChild(div);
   });
 }
 
 function selectOption(div, index) {
   document.querySelectorAll(".option").forEach(o => o.classList.remove("selected"));
   div.classList.add("selected");
-  selectedOption = index;
+  selectedIndex = index;
 }
 
 function submitAnswer() {
-  if (selectedOption === null) {
-    alert("Select an option");
-    return;
-  }
+  if (selectedIndex === null) return alert("Select an option");
 
   const q = shuffledQuestions[currentIndex];
-  const rationaleBox = document.getElementById("rationaleBox");
+  const chosenOption = q.options[selectedIndex];
+  const isCorrect = chosenOption.tag === q.correctTag;
+
+  score[chosenOption.tag]++;
+
+  document.querySelectorAll(".option").forEach((o, i) => {
+    if (q.options[i].tag === q.correctTag) o.classList.add("correct");
+    if (i === selectedIndex && !isCorrect) o.classList.add("wrong");
+  });
+
   rationaleBox.classList.remove("hidden");
+  rationaleBox.innerHTML = isCorrect
+    ? `<b>Correct.</b><br><br>${q.rationale.correct}`
+    : `<b>Incorrect.</b><br><br>${q.rationale.distractors[chosenOption.tag]}
+       <hr><b>Correct Rationale:</b><br>${q.rationale.correct}`;
 
-  const correctIndex = q.correct;
-  const chosenTag = q.options[selectedOption].tag;
-  score[chosenTag]++;
-
-  let html = "";
-
-  if (selectedOption === correctIndex) {
-    html += "<b>Correct.</b><br><br>";
-    html += q.rationale.correct;
-  } else {
-    html += "<b>Incorrect.</b><br><br>";
-    html += q.rationale.distractors[selectedOption];
-    html += "<hr><b>Correct Rationale:</b><br>" + q.rationale.correct;
-  }
-
-  rationaleBox.innerHTML = html;
-  document.getElementById("nextBtn").classList.remove("hidden");
+  nextBtn.classList.remove("hidden");
 }
 
 function nextQuestion() {
   currentIndex++;
-  if (currentIndex < shuffledQuestions.length) {
-    loadQuestion();
-  } else {
-    showResult();
-  }
+  currentIndex < shuffledQuestions.length ? loadQuestion() : showResult();
 }
 
 function showResult() {
-  document.getElementById("examScreen").classList.add("hidden");
-  document.getElementById("resultScreen").classList.remove("hidden");
+  examScreen.classList.add("hidden");
+  resultScreen.classList.remove("hidden");
 
-  let decision = score.SCFHS >= score.NCLEX && score.SCFHS >= score.STR
+  const decision = score.SCFHS >= score.NCLEX && score.SCFHS >= score.STR
     ? "🟢 GO — SCFHS Ready"
     : "🔴 NO-GO — Not SCFHS Ready";
 
-  let report = `
-  <b>Decision:</b> ${decision}<br><br>
-  <b>SCFHS Alignment:</b> ${score.SCFHS}<br>
-  <b>NCLEX Bias:</b> ${score.NCLEX}<br>
-  <b>STR Bias:</b> ${score.STR}<br><br>
-  <b>Examiner Interpretation:</b><br>
-  The response pattern indicates ${
-    decision.includes("GO")
-      ? "consistent prioritization aligned with SCFHS expectations."
-      : "delayed or escalation-biased decision-making inconsistent with SCFHS Prometric standards."
-  }
+  finalReport.innerHTML = `
+    <b>Decision:</b> ${decision}<br><br>
+    <b>SCFHS Alignment:</b> ${score.SCFHS}<br>
+    <b>NCLEX Bias:</b> ${score.NCLEX}<br>
+    <b>STR Bias:</b> ${score.STR}<br><br>
+    <b>Examiner Interpretation:</b><br>
+    ${decision.includes("GO")
+      ? "Consistent prioritization aligned with SCFHS Prometric expectations."
+      : "Delayed or escalation-biased decision-making inconsistent with SCFHS standards."}
   `;
-
-  document.getElementById("finalReport").innerHTML = report;
 }
 </script>
 
